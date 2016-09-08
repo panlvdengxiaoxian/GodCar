@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--推荐界面tab的选择器-->
+<item android:drawable="@mipmap/nav_icon_findcar_p"
+    android:state_selected="true"/>
+    <item android:drawable="@mipmap/nav_icon_findcar_f"
+        android:state_selected="false"/>
+</selector>
