@@ -1,6 +1,7 @@
 package net.lidongdong.godcar.ui.fragment;
 
 
+import android.graphics.Color;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -40,15 +41,15 @@ public class ArticleFragment extends AbsBaseFragment {
        articleTl=byView(R.id.article_tl);
         articleVp=byView(R.id.article_vp);
         fragments=new ArrayList<>();
-        fragments.add(new ChangeCarFragment());
+        fragments.add(new NewestFragment());
+        fragments.add(new UnihubFragment());
+        fragments.add(new NewsFragment());
         fragments.add(new BulletinFragment());
         fragments.add(new EvaluationFragment());
-        fragments.add(new NewestFragment());
-        fragments.add(new NewsFragment());
-        fragments.add(new TechnologyFragment());
-        fragments.add(new UnihubFragment());
-        fragments.add(new UserCarFragment());
+        fragments.add(new ChangeCarFragment());
         fragments.add(new VideoFragment());
+        fragments.add(new UserCarFragment());
+        fragments.add(new TechnologyFragment());
         articleVp.setAdapter(new FragmentPagerAdapter(getFragmentManager()) {
             @Override
             public Fragment getItem(int position) {
@@ -70,6 +71,7 @@ public class ArticleFragment extends AbsBaseFragment {
         articleTl.getTabAt(6).setCustomView(R.layout.tab_video);
         articleTl.getTabAt(7).setCustomView(R.layout.tab_usercar);
         articleTl.getTabAt(8).setCustomView(R.layout.tab_technology);
+
 
         articleTl.setTabMode(TabLayout.MODE_SCROLLABLE);
 

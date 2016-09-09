@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:textSize="@dimen/article_text"
         android:text="改装"
+        android:textColor="@drawable/selector_color"
         android:layout_gravity="center_horizontal"/>
 
 </LinearLayout>
