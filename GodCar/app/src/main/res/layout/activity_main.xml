@@ -2,18 +2,61 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/main_vp"
+    <FrameLayout
+        android:id="@+id/main_fl"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
 
-    <android.support.design.widget.TabLayout
-        android:id="@+id/main_tl"
+    <RadioGroup
+        android:id="@+id/main_rg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/background_light" />
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/article_rb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_article"
+            android:button="@null" />
+
+        <RadioButton
+            android:id="@+id/forum_rb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_forum"
+            android:button="@null" />
+
+        <RadioButton
+            android:id="@+id/findcar_rb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_findcar"
+            android:button="@null" />
+
+        <RadioButton
+            android:id="@+id/find_rb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_find"
+            android:button="@null" />
+
+        <RadioButton
+            android:id="@+id/setting_rb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_setting"
+            android:button="@null"/>
+
+    </RadioGroup>
 
 </LinearLayout>

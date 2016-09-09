@@ -1,5 +1,10 @@
 package net.lidongdong.godcar.ui.fragment;
 
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.view.View;
+import android.widget.TextView;
+
 import net.lidongdong.godcar.R;
 
 /**
@@ -10,6 +15,8 @@ public class FindFragment extends AbsBaseFragment {
     protected int setLayout() {
         return R.layout.fragment_find;
     }
+
+
 
     @Override
     protected void initViews() {

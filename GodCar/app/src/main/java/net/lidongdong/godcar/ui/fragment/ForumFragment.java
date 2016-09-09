@@ -1,5 +1,6 @@
 package net.lidongdong.godcar.ui.fragment;
 
+
 import net.lidongdong.godcar.R;
 
 /**
@@ -10,6 +11,8 @@ public class ForumFragment extends AbsBaseFragment{
     protected int setLayout() {
         return R.layout.fragment_forum;
     }
+
+
 
     @Override
     protected void initViews() {
