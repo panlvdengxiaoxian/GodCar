@@ -3,12 +3,131 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <include layout="@layout/title"/>
-    <ListView
+
+    <include layout="@layout/title" />
+
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/setting_lv"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="立即登录,体验更多"
+            android:textColor="#4362de"
+            android:textSize="20sp" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.6"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/user_login"
+                android:gravity="center"
+                android:text="登录"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/ahlib_login_icon_sina_f"
+                android:gravity="center"
+                android:text="微博登录"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/ahlib_login_icon_sina_f"
+                android:gravity="center"
+                android:text="微信登录"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:background="#a38c8c" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/money"
+            android:text="兑换商城"
+            android:gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/change"
+            android:gravity="center_vertical"
+            android:text="我的优惠券" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/time"
+            android:gravity="center_vertical"
+            android:text="我的收藏" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/time"
+            android:gravity="center_vertical"
+            android:text="浏览历史" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="草稿箱"
+            android:drawableLeft="@mipmap/set"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:background="#a38c8c"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="设置"
+            android:drawableLeft="@mipmap/set"/>
+
+    </LinearLayout>
 
 </LinearLayout>
