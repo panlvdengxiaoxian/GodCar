@@ -5,8 +5,12 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import net.lidongdong.godcar.R;
+import net.lidongdong.godcar.ui.activity.SearchActivity;
 import net.lidongdong.godcar.ui.fragment.FndCarFragment.BrandFragment;
 import net.lidongdong.godcar.ui.fragment.FndCarFragment.ChooseFragment;
 import net.lidongdong.godcar.ui.fragment.FndCarFragment.DepreciateFragment;
@@ -18,11 +22,12 @@ import java.util.List;
 /**
  * Created by dllo on 16/9/8.
  */
-public class FindCarFragment extends AbsBaseFragment {
+public class FindCarFragment extends AbsBaseFragment implements View.OnClickListener {
     private TabLayout findcarTl;
     private ViewPager findcarVp;
     private List<Fragment> fragments;
-
+     private TextView findCarAreaTv;
+    private ImageView findCarSearchImg;
     @Override
     protected int setLayout() {
         return R.layout.fragment_findcar;
@@ -33,6 +38,10 @@ public class FindCarFragment extends AbsBaseFragment {
     protected void initViews() {
         findcarTl = byView(R.id.findCar_tl);
         findcarVp = byView(R.id.findCar_vp);
+        findCarAreaTv=byView(R.id.findCar_area_tv);
+        findCarSearchImg=byView(R.id.findCar_search_img);
+        findCarSearchImg.setOnClickListener(this);
+        findCarAreaTv.setOnClickListener(this);
         fragments=new ArrayList<>();
         fragments.add(new BrandFragment());
         fragments.add(new ChooseFragment());
@@ -60,5 +69,15 @@ public class FindCarFragment extends AbsBaseFragment {
     @Override
     protected void initDatas() {
 
+
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.findCar_search_img:
+                goTo(SearchActivity.class);
+                break;
+        }
     }
 }

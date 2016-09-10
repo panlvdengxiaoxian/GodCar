@@ -3,15 +3,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
-
-    <android.support.design.widget.TabLayout
-        android:id="@+id/article_tl"
+    android:orientation="vertical"
+    android:background="@android:color/background_light">
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/background_light"
-        app:tabSelectedTextColor="@color/colorPrimaryDark"
-        />
+        android:orientation="horizontal">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/article_tl"
+            android:layout_width="0dp"
+            android:layout_weight="8"
+            android:layout_height="wrap_content"
+            android:background="@android:color/background_light"
+            app:tabSelectedTextColor="@color/colorPrimaryDark"
+            />
+        <ImageView
+            android:id="@+id/article_search_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ahlib_searchbar_icon_search"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+
 
     <android.support.v4.view.ViewPager
         android:id="@+id/article_vp"

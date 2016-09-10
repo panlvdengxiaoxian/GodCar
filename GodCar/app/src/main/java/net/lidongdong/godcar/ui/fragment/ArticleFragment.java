@@ -5,8 +5,11 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.view.View;
+import android.widget.ImageView;
 
 import net.lidongdong.godcar.R;
+import net.lidongdong.godcar.ui.activity.SearchActivity;
 import net.lidongdong.godcar.ui.fragment.article_fragment.BulletinFragment;
 import net.lidongdong.godcar.ui.fragment.article_fragment.ChangeCarFragment;
 import net.lidongdong.godcar.ui.fragment.article_fragment.EvaluationFragment;
@@ -23,10 +26,11 @@ import java.util.List;
 /**
  * Created by dllo on 16/9/8.
  */
-public class ArticleFragment extends AbsBaseFragment {
+public class ArticleFragment extends AbsBaseFragment implements View.OnClickListener {
 
     private TabLayout articleTl;
     private ViewPager articleVp;
+    private ImageView articleSearchImg;
     private List<Fragment> fragments;
 
     @Override
@@ -39,6 +43,8 @@ public class ArticleFragment extends AbsBaseFragment {
     protected void initViews() {
        articleTl=byView(R.id.article_tl);
         articleVp=byView(R.id.article_vp);
+        articleSearchImg=byView(R.id.article_search_img);
+        articleSearchImg.setOnClickListener(this);
         fragments=new ArrayList<>();
         fragments.add(new NewestFragment());
         fragments.add(new UnihubFragment());
@@ -82,4 +88,12 @@ public class ArticleFragment extends AbsBaseFragment {
     }
 
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.article_search_img:
+                goTo(SearchActivity.class);
+                break;
+        }
+    }
 }
