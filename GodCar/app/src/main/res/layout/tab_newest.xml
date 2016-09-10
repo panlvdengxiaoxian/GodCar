@@ -9,7 +9,7 @@
         android:textColor="@drawable/selector_color"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/article_text"
+        android:textSize="@dimen/article_textSize"
         android:text="最新"
         android:layout_gravity="center_horizontal"/>
 

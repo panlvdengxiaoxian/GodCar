@@ -3,9 +3,85 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <TextView
-        android:layout_width="wrap_content"
+
+    <HorizontalScrollView
+        android:id="@+id/handpick_hs"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="精选推荐"/>
+        android:background="@android:color/background_light"
+        android:scrollbars="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv1"
+                style="@style/styles_handpick"
+                android:text="媳妇当车模" />
+
+            <TextView
+                android:id="@+id/tv2"
+                style="@style/styles_handpick"
+                android:text="论坛红人" />
+
+            <TextView
+                android:id="@+id/tv3"
+                style="@style/styles_handpick"
+                android:text="美人计" />
+
+            <TextView
+                android:id="@+id/tv4"
+                style="@style/styles_handpick"
+                android:text="都比4" />
+
+            <TextView
+                android:id="@+id/tv5"
+                style="@style/styles_handpick"
+                android:text="都比5" />
+
+            <TextView
+                android:id="@+id/tv6"
+                style="@style/styles_handpick"
+                android:text="都比6" />
+
+            <TextView
+                android:id="@+id/tv7"
+                style="@style/styles_handpick"
+                android:text="都比7" />
+
+            <TextView
+                android:id="@+id/tv8"
+                style="@style/styles_handpick"
+                android:text="都比8" />
+
+            <TextView
+                android:id="@+id/tv9"
+                style="@style/styles_handpick"
+                android:text="都比9" />
+
+            <TextView
+                style="@style/styles_handpick"
+                android:id="@+id/tv10"
+                android:text="都比10" />
+
+            <TextView
+                android:id="@+id/tv11"
+                style="@style/styles_handpick"
+                android:text="都比11" />
+
+            <TextView
+                android:id="@+id/tv12"
+                style="@style/styles_handpick"
+                android:text="都比12" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <FrameLayout
+        android:id="@+id/handpick_fl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
 </LinearLayout>

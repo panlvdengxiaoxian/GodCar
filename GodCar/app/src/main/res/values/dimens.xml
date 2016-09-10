@@ -3,5 +3,7 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <!--推荐页的头文字字体大小-->
-    <dimen name="article_text">20sp</dimen>
+    <dimen name="article_textSize">20sp</dimen>
+    <!--论坛页精选的顶部布局文字大小-->
+    <dimen name="handpick_textSize">16sp</dimen>
 </resources>
