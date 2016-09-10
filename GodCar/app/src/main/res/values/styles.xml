@@ -9,8 +9,9 @@
     </style>
 
     <style name="styles_handpick">
+        <item name="android:button">@null</item>
         <item name="android:textSize">@dimen/handpick_textSize</item>
-        <item name="android:textColor">@drawable/selector_color</item>
+        <item name="android:textColor">@drawable/selector_textcolor</item>
         <item name="android:layout_margin">10dp</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>

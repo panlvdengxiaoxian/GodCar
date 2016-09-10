@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.HorizontalScrollView;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 import net.lidongdong.godcar.R;
@@ -20,8 +21,8 @@ import net.lidongdong.godcar.ui.fragment.Forum_fragment.handpick_fragment.WifeFo
  * Created by dllo on 16/9/9.
  */
 public class HandpickFragment extends AbsBaseFragment implements View.OnClickListener {
-    private TextView tv1,tv2,tv3,tv4,tv5,tv6,tv7,tv8,tv9;
-    private HorizontalScrollView handpickHs;
+
+    private RadioButton rb1,rb2,rb3,rb4,rb5,rb6,rb7,rb8,rb9;
     private FrameLayout handpickFl;
 
     @Override
@@ -32,32 +33,27 @@ public class HandpickFragment extends AbsBaseFragment implements View.OnClickLis
     @Override
     protected void initViews() {
 
-        tv1=byView(R.id.tv1);
-        tv2=byView(R.id.tv2);
-        tv3=byView(R.id.tv3);
-        tv4=byView(R.id.tv4);
-        tv5=byView(R.id.tv5);
-        tv6=byView(R.id.tv6);
-        tv7=byView(R.id.tv7);
-        tv8=byView(R.id.tv8);
-        tv9=byView(R.id.tv9);
+        rb1=byView(R.id.rb1);
+        rb2=byView(R.id.rb2);
+        rb3=byView(R.id.rb3);
+        rb4=byView(R.id.rb4);
+        rb5=byView(R.id.rb5);
+        rb6=byView(R.id.rb6);
+        rb7=byView(R.id.rb7);
+        rb8=byView(R.id.rb8);
+        rb9=byView(R.id.rb9);
 
         handpickFl=byView(R.id.handpick_fl);
-        handpickHs=byView(R.id.handpick_hs);
 
-        tv1.setOnClickListener(this);
-        tv2.setOnClickListener(this);
-        tv3.setOnClickListener(this);
-        tv4.setOnClickListener(this);
-        tv5.setOnClickListener(this);
-        tv6.setOnClickListener(this);
-        tv7.setOnClickListener(this);
-        tv8.setOnClickListener(this);
-        tv9.setOnClickListener(this);
-
-
-
-
+        rb1.setOnClickListener(this);
+        rb2.setOnClickListener(this);
+        rb3.setOnClickListener(this);
+        rb4.setOnClickListener(this);
+        rb5.setOnClickListener(this);
+        rb6.setOnClickListener(this);
+        rb7.setOnClickListener(this);
+        rb8.setOnClickListener(this);
+        rb9.setOnClickListener(this);
     }
 
     @Override
@@ -72,39 +68,39 @@ public class HandpickFragment extends AbsBaseFragment implements View.OnClickLis
         FragmentTransaction ft;
         ft=getFragmentManager().beginTransaction();
         switch (v.getId()){
-            case R.id.tv1:
+            case R.id.rb1:
                 ft.replace(R.id.handpick_fl,new WifeForModelFragment());
                 ft.commit();
                 break;
-            case R.id.tv2:
+            case R.id.rb2:
                 ft.replace(R.id.handpick_fl,new ForumHotManFragment());
                 ft.commit();
                 break;
-            case R.id.tv3:
+            case R.id.rb3:
                 ft.replace(R.id.handpick_fl,new BeutiGirllFragment());
                 ft.commit();
                 break;
-            case R.id.tv4:
+            case R.id.rb4:
                 ft.replace(R.id.handpick_fl,new TextFragment());
                 ft.commit();
                 break;
-            case R.id.tv5:
+            case R.id.rb5:
                 ft.replace(R.id.handpick_fl,new TextFragment());
                 ft.commit();
                 break;
-            case R.id.tv6:
+            case R.id.rb6:
                 ft.replace(R.id.handpick_fl,new TextFragment());
                 ft.commit();
                 break;
-            case R.id.tv7:
+            case R.id.rb7:
                 ft.replace(R.id.handpick_fl,new TextFragment());
                 ft.commit();
                 break;
-            case R.id.tv8:
+            case R.id.rb8:
                 ft.replace(R.id.handpick_fl,new TextFragment());
                 ft.commit();
                 break;
-            case R.id.tv9:
+            case R.id.rb9:
                 ft.replace(R.id.handpick_fl,new TextFragment());
                 ft.commit();
                 break;
