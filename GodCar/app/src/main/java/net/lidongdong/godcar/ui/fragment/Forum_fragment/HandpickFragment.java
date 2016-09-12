@@ -5,9 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.widget.FrameLayout;
-import android.widget.HorizontalScrollView;
 import android.widget.RadioButton;
-import android.widget.TextView;
 
 import net.lidongdong.godcar.R;
 import net.lidongdong.godcar.ui.fragment.AbsBaseFragment;

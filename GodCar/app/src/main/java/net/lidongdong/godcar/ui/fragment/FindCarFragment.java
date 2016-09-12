@@ -26,7 +26,7 @@ public class FindCarFragment extends AbsBaseFragment implements View.OnClickList
     private TabLayout findcarTl;
     private ViewPager findcarVp;
     private List<Fragment> fragments;
-     private TextView findCarAreaTv;
+//     private TextView findCarAreaTv;
     private ImageView findCarSearchImg;
     @Override
     protected int setLayout() {
@@ -38,10 +38,10 @@ public class FindCarFragment extends AbsBaseFragment implements View.OnClickList
     protected void initViews() {
         findcarTl = byView(R.id.findCar_tl);
         findcarVp = byView(R.id.findCar_vp);
-        findCarAreaTv=byView(R.id.findCar_area_tv);
+//        findCarAreaTv=byView(R.id.findCar_area_tv);
         findCarSearchImg=byView(R.id.findCar_search_img);
         findCarSearchImg.setOnClickListener(this);
-        findCarAreaTv.setOnClickListener(this);
+//        findCarAreaTv.setOnClickListener(this);
         fragments=new ArrayList<>();
         fragments.add(new BrandFragment());
         fragments.add(new ChooseFragment());

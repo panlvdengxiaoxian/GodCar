@@ -2,19 +2,21 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="@android:color/background_light">
 
         <android.support.design.widget.TabLayout
             android:id="@+id/findCar_tl"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="8"
-            android:background="@android:color/background_light" />
+            app:tabIndicatorColor="#7255f5"/>
 
         <ImageView
             android:id="@+id/findCar_search_img"
@@ -22,17 +24,17 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
-            android:src="@mipmap/ahlib_searchbar_icon_search" />
+            android:src="@mipmap/search" />
 
-        <TextView
-            android:id="@+id/findCar_area_tv"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:text="地区"
-            android:textSize="17sp" />
+        <!--<TextView-->
+            <!--android:id="@+id/findCar_area_tv"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:layout_margin="5dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="地区"-->
+            <!--android:textSize="17sp" />-->
 
     </LinearLayout>
 

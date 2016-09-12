@@ -44,7 +44,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:drawableTop="@mipmap/ahlib_login_icon_sina_f"
+                android:drawableTop="@mipmap/login_weibo"
                 android:gravity="center"
                 android:text="微博登录"
                 android:textSize="14sp" />
@@ -55,7 +55,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:drawableTop="@mipmap/ahlib_login_icon_sina_f"
+                android:drawableTop="@mipmap/login_wexin"
                 android:gravity="center"
                 android:text="微信登录"
                 android:textSize="14sp" />

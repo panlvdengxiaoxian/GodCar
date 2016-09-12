@@ -2,10 +2,52 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="降价"/>
+    android:orientation="vertical"
+    >
 
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/background_light">
+
+            <TextView
+                android:id="@+id/depreciate_brand_tv"
+                android:layout_marginLeft="30dp"
+                android:text="品牌"
+                style="@style/style_depreciate" />
+
+            <TextView
+                android:id="@+id/depreciate_price_tv"
+                android:layout_marginLeft="50dp"
+                android:layout_toRightOf="@id/depreciate_brand_tv"
+                android:text="价格"
+                style="@style/style_depreciate"/>
+
+            <TextView
+                android:id="@+id/depreciate_level_tv"
+                android:layout_marginLeft="50dp"
+                android:layout_toRightOf="@id/depreciate_price_tv"
+                android:text="级别"
+                style="@style/style_depreciate"/>
+
+            <TextView
+                android:id="@+id/depreciate_order_tv"
+                android:layout_marginLeft="50dp"
+                android:layout_toRightOf="@id/depreciate_level_tv"
+                android:text="排序"
+                style="@style/style_depreciate"/>
+
+            <TextView
+                android:id="@+id/depreciate_area_tv"
+                android:layout_marginLeft="50dp"
+                android:layout_toRightOf="@id/depreciate_order_tv"
+                android:text="大连"
+                style="@style/style_depreciate"/>
+        </RelativeLayout>
+    </HorizontalScrollView>
 </LinearLayout>

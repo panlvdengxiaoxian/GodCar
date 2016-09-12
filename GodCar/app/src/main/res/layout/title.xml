@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_margin="10dp"
-        android:src="@mipmap/ahlib_searchbar_icon_search" />
+        android:src="@mipmap/search" />
 
 
 </RelativeLayout>

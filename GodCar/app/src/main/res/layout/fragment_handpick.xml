@@ -4,7 +4,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+
     <HorizontalScrollView
+
         android:id="@+id/handpick_hs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -63,9 +65,16 @@
                 style="@style/styles_handpick"
                 android:text="都比9" />
 
-
         </RadioGroup>
+
+
     </HorizontalScrollView>
+    <!--四个口-->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/sum"/>
+
 
     <FrameLayout
         android:id="@+id/handpick_fl"
