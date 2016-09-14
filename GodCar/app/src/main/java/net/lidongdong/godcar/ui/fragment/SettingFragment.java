@@ -1,6 +1,7 @@
 package net.lidongdong.godcar.ui.fragment;
 
 
+import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -14,6 +15,15 @@ import net.lidongdong.godcar.ui.activity.SearchActivity;
 public class SettingFragment extends AbsBaseFragment implements View.OnClickListener {
     private TextView titleFindTv;
     private ImageView searchImg;
+
+    public static SettingFragment newInstance() {
+
+        Bundle args = new Bundle();
+
+        SettingFragment fragment = new SettingFragment();
+        fragment.setArguments(args);
+        return fragment;
+    }
     @Override
     protected int setLayout() {
         return R.layout.fragment_setting;

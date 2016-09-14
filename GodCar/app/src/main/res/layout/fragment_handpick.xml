@@ -1,85 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
-    <HorizontalScrollView
-
-        android:id="@+id/handpick_hs"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/handpick_rv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/background_light"
-        android:scrollbars="none">
-
-        <RadioGroup
-            android:id="@+id/handpick_rg"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:id="@+id/rb1"
-                style="@style/styles_handpick"
-                android:text="媳妇当车模"
-                />
-
-            <RadioButton
-                android:id="@+id/rb2"
-                style="@style/styles_handpick"
-                android:text="论坛红人" />
-
-            <RadioButton
-                android:id="@+id/rb3"
-                style="@style/styles_handpick"
-                android:text="美人计" />
-
-            <RadioButton
-                android:id="@+id/rb4"
-                style="@style/styles_handpick"
-                android:text="都比4" />
-
-            <RadioButton
-                android:id="@+id/rb5"
-                style="@style/styles_handpick"
-                android:text="都比5" />
-
-            <RadioButton
-                android:id="@+id/rb6"
-                style="@style/styles_handpick"
-                android:text="都比6" />
-
-            <RadioButton
-                android:id="@+id/rb7"
-                style="@style/styles_handpick"
-                android:text="都比7" />
-
-            <RadioButton
-                android:id="@+id/rb8"
-                style="@style/styles_handpick"
-                android:text="都比8" />
-
-            <RadioButton
-                android:id="@+id/rb9"
-                style="@style/styles_handpick"
-                android:text="都比9" />
-
-        </RadioGroup>
+        android:scrollbars="none" />
 
 
-    </HorizontalScrollView>
-    <!--四个口-->
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/sum"/>
+    <!--<HorizontalScrollView-->
+
+        <!--android:id="@+id/handpick_hs"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@android:color/background_light"-->
+        <!--android:scrollbars="none">-->
+
+        <!--<RadioGroup-->
+            <!--android:id="@+id/handpick_rg"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<RadioButton-->
+                <!--android:id="@+id/rb1"-->
+                <!--style="@style/styles_handpick"-->
+                <!--android:text="媳妇当车模" />-->
+
+            <!--<RadioButton-->
+                <!--android:id="@+id/rb2"-->
+                <!--style="@style/styles_handpick"-->
+                <!--android:text="论坛红人" />-->
+
+            <!--<RadioButton-->
+                <!--android:id="@+id/rb3"-->
+                <!--style="@style/styles_handpick"-->
+                <!--android:text="美人计" />-->
+
+            <!--<RadioButton-->
+                <!--android:id="@+id/rb4"-->
+                <!--style="@style/styles_handpick"-->
+                <!--android:text="都比4" />-->
+
+            <!--<RadioButton-->
+                <!--android:id="@+id/rb5"-->
+                <!--style="@style/styles_handpick"-->
+                <!--android:text="都比5" />-->
+
+            <!--<RadioButton-->
+                <!--android:id="@+id/rb6"-->
+                <!--style="@style/styles_handpick"-->
+                <!--android:text="都比6" />-->
+
+            <!--<RadioButton-->
+                <!--android:id="@+id/rb7"-->
+                <!--style="@style/styles_handpick"-->
+                <!--android:text="都比7" />-->
+
+            <!--<RadioButton-->
+                <!--android:id="@+id/rb8"-->
+                <!--style="@style/styles_handpick"-->
+                <!--android:text="都比8" />-->
+
+            <!--<RadioButton-->
+                <!--android:id="@+id/rb9"-->
+                <!--style="@style/styles_handpick"-->
+                <!--android:text="都比9" />-->
+
+        <!--</RadioGroup>-->
 
 
-    <FrameLayout
-        android:id="@+id/handpick_fl"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
+    <!--</HorizontalScrollView>-->
+    <!--&lt;!&ndash;四个口&ndash;&gt;-->
+    <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:src="@mipmap/sum" />-->
 
-</LinearLayout>
+
+    <!--<FrameLayout-->
+        <!--android:id="@+id/handpick_fl"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1" />-->
+
+</RelativeLayout>

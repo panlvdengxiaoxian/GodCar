@@ -60,23 +60,23 @@ public class MainActivity extends AbsActivity implements View.OnClickListener {
         ft = getSupportFragmentManager().beginTransaction();
         switch (v.getId()) {
             case R.id.article_rb:
-                ft.replace(R.id.main_fl, new ArticleFragment());
+                ft.replace(R.id.main_fl, ArticleFragment.newInstance());
                 ft.commit();
                 break;
             case R.id.forum_rb:
-                ft.replace(R.id.main_fl, new ForumFragment());
+                ft.replace(R.id.main_fl,  ForumFragment.newInstance());
                 ft.commit();
                 break;
             case R.id.findcar_rb:
-                ft.replace(R.id.main_fl, new FindCarFragment());
+                ft.replace(R.id.main_fl,  FindCarFragment.newInstance());
                 ft.commit();
                 break;
             case R.id.find_rb:
-                ft.replace(R.id.main_fl, new FindFragment());
+                ft.replace(R.id.main_fl,  FindFragment.newInstance());
                 ft.commit();
                 break;
             case R.id.setting_rb:
-                ft.replace(R.id.main_fl, new SettingFragment());
+                ft.replace(R.id.main_fl, SettingFragment.newInstance());
                 ft.commit();
                 break;
             default:

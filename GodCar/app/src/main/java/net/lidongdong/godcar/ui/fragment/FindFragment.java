@@ -2,6 +2,7 @@ package net.lidongdong.godcar.ui.fragment;
 
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -18,6 +19,15 @@ public class FindFragment extends AbsBaseFragment implements View.OnClickListene
     @Override
     protected int setLayout() {
         return R.layout.fragment_find;
+    }
+
+    public static FindFragment newInstance() {
+
+        Bundle args = new Bundle();
+
+        FindFragment fragment = new FindFragment();
+        fragment.setArguments(args);
+        return fragment;
     }
 
     @Override

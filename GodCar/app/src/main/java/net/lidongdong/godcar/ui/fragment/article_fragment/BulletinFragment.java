@@ -1,5 +1,7 @@
 package net.lidongdong.godcar.ui.fragment.article_fragment;
 
+import android.os.Bundle;
+
 import net.lidongdong.godcar.R;
 import net.lidongdong.godcar.ui.fragment.AbsBaseFragment;
 
@@ -8,6 +10,14 @@ import net.lidongdong.godcar.ui.fragment.AbsBaseFragment;
  * 推荐界面的快报
  */
 public class BulletinFragment extends AbsBaseFragment {
+    public static BulletinFragment newInstance() {
+
+        Bundle args = new Bundle();
+
+        BulletinFragment fragment = new BulletinFragment();
+        fragment.setArguments(args);
+        return fragment;
+    }
     @Override
     protected int setLayout() {
         return R.layout.fragment_bulletin;

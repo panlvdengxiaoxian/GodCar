@@ -1,6 +1,7 @@
 package net.lidongdong.godcar.ui.fragment;
 
 
+import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -29,6 +30,15 @@ public class ForumFragment extends AbsBaseFragment implements View.OnClickListen
     protected int setLayout() {
         return R.layout.fragment_forum;
     }
+
+    public static ForumFragment newInstance() {
+
+        Bundle args = new Bundle();
+
+        ForumFragment fragment = new ForumFragment();
+        fragment.setArguments(args);
+        return fragment;
+    }
     @Override
     protected void initViews() {
        forumTl=byView(R.id.forum_tl);
@@ -36,9 +46,9 @@ public class ForumFragment extends AbsBaseFragment implements View.OnClickListen
         forumSearchImg=byView(R.id.forum_search_img);
         forumSearchImg.setOnClickListener(this);
         fragments=new ArrayList<>();
-        fragments.add(new HandpickFragment());
-        fragments.add(new HotPagerFragment());
-        fragments.add(new CommonFragment());
+        fragments.add(HandpickFragment.newInstance());
+        fragments.add(HotPagerFragment.newInstance());
+        fragments.add(CommonFragment.newInstance());
         forumVp.setAdapter(new FragmentPagerAdapter(getFragmentManager()) {
             @Override
             public Fragment getItem(int position) {

@@ -3,6 +3,7 @@ package net.lidongdong.godcar.ui.fragment;
 
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -40,7 +41,14 @@ public class ArticleFragment extends AbsBaseFragment implements View.OnClickList
         return R.layout.fragment_article;
     }
 
+    public static ArticleFragment newInstance() {
 
+        Bundle args = new Bundle();
+
+        ArticleFragment fragment = new ArticleFragment();
+        fragment.setArguments(args);
+        return fragment;
+    }
     @Override
     protected void initViews() {
        articleTl=byView(R.id.article_tl);
@@ -48,15 +56,15 @@ public class ArticleFragment extends AbsBaseFragment implements View.OnClickList
         articleSearchImg=byView(R.id.article_search_img);
         articleSearchImg.setOnClickListener(this);
         fragments=new ArrayList<>();
-        fragments.add(new NewestFragment());
-        fragments.add(new UnihubFragment());
-        fragments.add(new NewsFragment());
-        fragments.add(new BulletinFragment());
-        fragments.add(new EvaluationFragment());
-        fragments.add(new ChangeCarFragment());
-        fragments.add(new VideoFragment());
-        fragments.add(new UserCarFragment());
-        fragments.add(new TechnologyFragment());
+        fragments.add( NewestFragment.newInstance());
+        fragments.add( UnihubFragment.newInstance());
+        fragments.add(NewsFragment.newInstance());
+        fragments.add(BulletinFragment.newInstance());
+        fragments.add(EvaluationFragment.newInstance());
+        fragments.add(ChangeCarFragment.newInstance());
+        fragments.add(VideoFragment.newInstance());
+        fragments.add(UserCarFragment.newInstance());
+        fragments.add(TechnologyFragment.newInstance());
         articleVp.setAdapter(new FragmentPagerAdapter(getFragmentManager()) {
             @Override
             public Fragment getItem(int position) {
