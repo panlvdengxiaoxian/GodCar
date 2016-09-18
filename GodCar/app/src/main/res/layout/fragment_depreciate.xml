@@ -2,8 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
     <HorizontalScrollView
         android:layout_width="match_parent"
@@ -17,37 +16,37 @@
 
             <TextView
                 android:id="@+id/depreciate_brand_tv"
-                android:layout_marginLeft="30dp"
-                android:text="品牌"
-                style="@style/style_depreciate" />
+                style="@style/style_depreciate"
+                android:layout_marginLeft="@dimen/brand_marLeft"
+                android:text="@string/depreciate_brand" />
 
             <TextView
                 android:id="@+id/depreciate_price_tv"
-                android:layout_marginLeft="50dp"
+                style="@style/style_depreciate"
+                android:layout_marginLeft="@dimen/marLeft"
                 android:layout_toRightOf="@id/depreciate_brand_tv"
-                android:text="价格"
-                style="@style/style_depreciate"/>
+                android:text="@string/depreciate_price" />
 
             <TextView
                 android:id="@+id/depreciate_level_tv"
-                android:layout_marginLeft="50dp"
+                style="@style/style_depreciate"
+                android:layout_marginLeft="@dimen/marLeft"
                 android:layout_toRightOf="@id/depreciate_price_tv"
-                android:text="级别"
-                style="@style/style_depreciate"/>
+                android:text="@string/depreciate_level" />
 
             <TextView
                 android:id="@+id/depreciate_order_tv"
-                android:layout_marginLeft="50dp"
+                style="@style/style_depreciate"
+                android:layout_marginLeft="@dimen/marLeft"
                 android:layout_toRightOf="@id/depreciate_level_tv"
-                android:text="排序"
-                style="@style/style_depreciate"/>
+                android:text="@string/depreciate_order" />
 
             <TextView
                 android:id="@+id/depreciate_area_tv"
-                android:layout_marginLeft="50dp"
+                style="@style/style_depreciate"
+                android:layout_marginLeft="@dimen/marLeft"
                 android:layout_toRightOf="@id/depreciate_order_tv"
-                android:text="大连"
-                style="@style/style_depreciate"/>
+                android:text="@string/depreciate_area" />
         </RelativeLayout>
     </HorizontalScrollView>
 </LinearLayout>

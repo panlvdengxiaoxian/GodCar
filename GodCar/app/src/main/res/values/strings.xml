@@ -1,4 +1,22 @@
 <resources>
     <string name="app_name">GodCar</string>
     <string name="car_name">为你的爱车找到队伍</string>
+    <!--找车-折扣界面-->
+    <!--<string-array name="depreciate">-->
+        <!--<item name="brand">品牌</item>-->
+    <!--</string-array>-->
+    <string name="depreciate_brand">品牌</string>
+    <string name="depreciate_price">价钱</string>
+    <string name="depreciate_level">级别</string>
+    <string name="depreciate_order">排序</string>
+    <string name="depreciate_area">地区</string>
+    <!--论坛-常用论坛-->
+    <string name="common_carShow">车系论坛</string>
+    <string name="common_findCarToTeam">为你的爱车找队伍</string>
+    <string name="common_area_">地区论坛</string>
+    <string name="common_area">一群爱车的man</string>
+    <string name="common_sort_">车系论坛</string>
+    <string name="common_sort">逗逼南波湾</string>
+
+
 </resources>

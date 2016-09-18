@@ -7,6 +7,7 @@ import net.lidongdong.godcar.ui.fragment.AbsBaseFragment;
 
 /**
  * Created by dllo on 16/9/9.
+ * 推荐界面的最新
  */
 public class NewestFragment extends AbsBaseFragment {
     public static NewestFragment newInstance() {
@@ -17,6 +18,7 @@ public class NewestFragment extends AbsBaseFragment {
         fragment.setArguments(args);
         return fragment;
     }
+
     @Override
     protected int setLayout() {
         return R.layout.fragment_newest;

@@ -6,4 +6,7 @@
     <dimen name="article_textSize">14sp</dimen>
     <!--论坛页精选的顶部布局文字大小-->
     <dimen name="handpick_textSize">16sp</dimen>
+    <!--找车-折扣界面-->
+    <dimen name="brand_marLeft">30dp</dimen>
+    <dimen name="marLeft">50dp</dimen>
 </resources>

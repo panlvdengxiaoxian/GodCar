@@ -7,6 +7,8 @@ import net.lidongdong.godcar.ui.fragment.AbsBaseFragment;
 
 /**
  * Created by dllo on 16/9/9.
+ * 推荐界面的用车
+ *
  */
 public class UserCarFragment extends AbsBaseFragment {
     public static UserCarFragment newInstance() {

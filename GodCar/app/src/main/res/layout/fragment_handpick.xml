@@ -13,79 +13,79 @@
 
     <!--<HorizontalScrollView-->
 
-        <!--android:id="@+id/handpick_hs"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:background="@android:color/background_light"-->
-        <!--android:scrollbars="none">-->
+    <!--android:id="@+id/handpick_hs"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@android:color/background_light"-->
+    <!--android:scrollbars="none">-->
 
-        <!--<RadioGroup-->
-            <!--android:id="@+id/handpick_rg"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:orientation="horizontal">-->
+    <!--<RadioGroup-->
+    <!--android:id="@+id/handpick_rg"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal">-->
 
-            <!--<RadioButton-->
-                <!--android:id="@+id/rb1"-->
-                <!--style="@style/styles_handpick"-->
-                <!--android:text="媳妇当车模" />-->
+    <!--<RadioButton-->
+    <!--android:id="@+id/rb1"-->
+    <!--style="@style/styles_handpick"-->
+    <!--android:text="媳妇当车模" />-->
 
-            <!--<RadioButton-->
-                <!--android:id="@+id/rb2"-->
-                <!--style="@style/styles_handpick"-->
-                <!--android:text="论坛红人" />-->
+    <!--<RadioButton-->
+    <!--android:id="@+id/rb2"-->
+    <!--style="@style/styles_handpick"-->
+    <!--android:text="论坛红人" />-->
 
-            <!--<RadioButton-->
-                <!--android:id="@+id/rb3"-->
-                <!--style="@style/styles_handpick"-->
-                <!--android:text="美人计" />-->
+    <!--<RadioButton-->
+    <!--android:id="@+id/rb3"-->
+    <!--style="@style/styles_handpick"-->
+    <!--android:text="美人计" />-->
 
-            <!--<RadioButton-->
-                <!--android:id="@+id/rb4"-->
-                <!--style="@style/styles_handpick"-->
-                <!--android:text="都比4" />-->
+    <!--<RadioButton-->
+    <!--android:id="@+id/rb4"-->
+    <!--style="@style/styles_handpick"-->
+    <!--android:text="都比4" />-->
 
-            <!--<RadioButton-->
-                <!--android:id="@+id/rb5"-->
-                <!--style="@style/styles_handpick"-->
-                <!--android:text="都比5" />-->
+    <!--<RadioButton-->
+    <!--android:id="@+id/rb5"-->
+    <!--style="@style/styles_handpick"-->
+    <!--android:text="都比5" />-->
 
-            <!--<RadioButton-->
-                <!--android:id="@+id/rb6"-->
-                <!--style="@style/styles_handpick"-->
-                <!--android:text="都比6" />-->
+    <!--<RadioButton-->
+    <!--android:id="@+id/rb6"-->
+    <!--style="@style/styles_handpick"-->
+    <!--android:text="都比6" />-->
 
-            <!--<RadioButton-->
-                <!--android:id="@+id/rb7"-->
-                <!--style="@style/styles_handpick"-->
-                <!--android:text="都比7" />-->
+    <!--<RadioButton-->
+    <!--android:id="@+id/rb7"-->
+    <!--style="@style/styles_handpick"-->
+    <!--android:text="都比7" />-->
 
-            <!--<RadioButton-->
-                <!--android:id="@+id/rb8"-->
-                <!--style="@style/styles_handpick"-->
-                <!--android:text="都比8" />-->
+    <!--<RadioButton-->
+    <!--android:id="@+id/rb8"-->
+    <!--style="@style/styles_handpick"-->
+    <!--android:text="都比8" />-->
 
-            <!--<RadioButton-->
-                <!--android:id="@+id/rb9"-->
-                <!--style="@style/styles_handpick"-->
-                <!--android:text="都比9" />-->
+    <!--<RadioButton-->
+    <!--android:id="@+id/rb9"-->
+    <!--style="@style/styles_handpick"-->
+    <!--android:text="都比9" />-->
 
-        <!--</RadioGroup>-->
+    <!--</RadioGroup>-->
 
 
     <!--</HorizontalScrollView>-->
     <!--&lt;!&ndash;四个口&ndash;&gt;-->
     <!--<ImageView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_alignParentRight="true"-->
-        <!--android:src="@mipmap/sum" />-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:src="@mipmap/sum" />-->
 
 
     <!--<FrameLayout-->
-        <!--android:id="@+id/handpick_fl"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="0dp"-->
-        <!--android:layout_weight="1" />-->
+    <!--android:id="@+id/handpick_fl"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1" />-->
 
 </RelativeLayout>

@@ -10,8 +10,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:text="我"
-        android:textSize="20sp"
-        android:textColor="#797ce4"/>
+        android:textColor="#797ce4"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/title_find_tv"

@@ -73,8 +73,8 @@
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:drawableLeft="@mipmap/money"
-            android:text="兑换商城"
-            android:gravity="center_vertical"/>
+            android:gravity="center_vertical"
+            android:text="兑换商城" />
 
         <TextView
             android:layout_width="match_parent"
@@ -108,9 +108,9 @@
             android:layout_height="0dp"
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
+            android:drawableLeft="@mipmap/set"
             android:gravity="center_vertical"
-            android:text="草稿箱"
-            android:drawableLeft="@mipmap/set"/>
+            android:text="草稿箱" />
 
         <View
             android:layout_width="match_parent"
@@ -124,9 +124,9 @@
             android:layout_height="0dp"
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
+            android:drawableLeft="@mipmap/set"
             android:gravity="center_vertical"
-            android:text="设置"
-            android:drawableLeft="@mipmap/set"/>
+            android:text="设置" />
 
     </LinearLayout>
 

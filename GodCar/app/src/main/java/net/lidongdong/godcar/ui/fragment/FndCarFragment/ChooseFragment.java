@@ -20,6 +20,7 @@ public class ChooseFragment extends AbsBaseFragment {
     @Override
     protected int setLayout() {
         return R.layout.fragment_choose;
+
     }
 
     @Override
