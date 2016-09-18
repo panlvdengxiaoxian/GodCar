@@ -2,25 +2,25 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:orientation="vertical">
     <!--首页最新页头布局-->
-    <fragment
-        android:id="@+id/fragment_cycle_viewpager_content"
-        android:name="net.lidongdong.godcar.ui.fragment.article_fragment.NewestFragment"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="300dp">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
+        <android.support.v4.view.ViewPager
+            android:id="@+id/rotate_vp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="content" />
-    </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/rotate_point_container"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal" />
+    </FrameLayout>
 
 
 </LinearLayout>

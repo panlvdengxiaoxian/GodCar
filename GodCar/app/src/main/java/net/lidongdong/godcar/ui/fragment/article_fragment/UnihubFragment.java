@@ -49,41 +49,41 @@ public class UnihubFragment extends AbsBaseFragment implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.unihub_popwindow_rl:
-                popWindow();
+//                popWindow();
                 break;
         }
     }
 
-    private void popWindow() {
-        NormalSelectionDialog dialog= new NormalSelectionDialog.Builder(context)
-                .setlTitleVisible(true)   //设置是否显示标题
-                .setTitleHeight(65)   //设置标题高度
-                .setTitleText("please select")  //设置标题提示文本
-                .setTitleTextSize(14) //设置标题字体大小 sp
-                .setTitleTextColor(R.color.colorPrimary) //设置标题文本颜色
-                .setItemHeight(40)  //设置item的高度
-                .setItemWidth(0.9f)  //屏幕宽度*0.9
-                .setItemTextColor(R.color.colorPrimaryDark)  //设置item字体颜色
-                .setItemTextSize(14)  //设置item字体大小
-                .setCancleButtonText("取消")  //设置最底部“取消”按钮文本
-                .setOnItemListener(new DialogOnItemClickListener() {  //监听item点击事件
-                    @Override
-                    public void onItemClick(Button button, int position) {
-//                                dialog1.dismiss();
-//                              Toast.makeText(context, s.get(position), Toast.LENGTH_SHORT).show();
-
-
-                    }
-                })
-                .setCanceledOnTouchOutside(true)  //设置是否可点击其他地方取消dialog
-                .build();
-        ArrayList<String> s = new ArrayList<>();
-        s.add("Weavey0");
-        s.add("Weavey1");
-        s.add("Weavey2");
-        s.add("Weavey3");
-        dialog.setDataList(s);
-    }
+//    private void popWindow() {
+//        NormalSelectionDialog dialog= new NormalSelectionDialog.Builder(context)
+//                .setlTitleVisible(true)   //设置是否显示标题
+//                .setTitleHeight(65)   //设置标题高度
+//                .setTitleText("please select")  //设置标题提示文本
+//                .setTitleTextSize(14) //设置标题字体大小 sp
+//                .setTitleTextColor(R.color.colorPrimary) //设置标题文本颜色
+//                .setItemHeight(40)  //设置item的高度
+//                .setItemWidth(0.9f)  //屏幕宽度*0.9
+//                .setItemTextColor(R.color.colorPrimaryDark)  //设置item字体颜色
+//                .setItemTextSize(14)  //设置item字体大小
+//                .setCancleButtonText("取消")  //设置最底部“取消”按钮文本
+//                .setOnItemListener(new DialogOnItemClickListener() {  //监听item点击事件
+//                    @Override
+//                    public void onItemClick(Button button, int position) {
+////                                dialog1.dismiss();
+////                              Toast.makeText(context, s.get(position), Toast.LENGTH_SHORT).show();
+//
+//
+//                    }
+//                })
+//                .setCanceledOnTouchOutside(true)  //设置是否可点击其他地方取消dialog
+//                .build();
+//        ArrayList<String> s = new ArrayList<>();
+//        s.add("Weavey0");
+//        s.add("Weavey1");
+//        s.add("Weavey2");
+//        s.add("Weavey3");
+//        dialog.setDataList(s);
+//    }
 }
 
 
