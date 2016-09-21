@@ -49,15 +49,21 @@ public class ArticleFragment extends AbsBaseFragment implements View.OnClickList
         fragment.setArguments(args);
         return fragment;
     }
+
     @Override
     protected void initViews() {
-       articleTl=byView(R.id.article_tl);
-        articleVp=byView(R.id.article_vp);
-        articleSearchImg=byView(R.id.article_search_img);
+        articleTl = byView(R.id.article_tl);
+        articleVp = byView(R.id.article_vp);
+        articleSearchImg = byView(R.id.article_search_img);
         articleSearchImg.setOnClickListener(this);
-        fragments=new ArrayList<>();
-        fragments.add( NewestFragment.newInstance());
-        fragments.add( UnihubFragment.newInstance());
+        fragments = new ArrayList<>();
+
+    }
+
+    @Override
+    protected void initDatas() {
+        fragments.add(NewestFragment.newInstance());
+        fragments.add(UnihubFragment.newInstance());
         fragments.add(NewsFragment.newInstance());
         fragments.add(BulletinFragment.newInstance());
         fragments.add(EvaluationFragment.newInstance());
@@ -89,17 +95,13 @@ public class ArticleFragment extends AbsBaseFragment implements View.OnClickList
 
 
         articleTl.setTabMode(TabLayout.MODE_SCROLLABLE);
-    }
-
-    @Override
-    protected void initDatas() {
 
     }
 
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.article_search_img:
                 goTo(SearchActivity.class);
                 break;

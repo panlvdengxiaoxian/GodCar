@@ -12,7 +12,6 @@ import android.widget.TextView;
 
 import net.lidongdong.godcar.R;
 import net.lidongdong.godcar.model.bean.NewestHandBean;
-import net.lidongdong.godcar.ui.adapter.NewestAdapter;
 import net.lidongdong.godcar.ui.adapter.NewestHandAdapter;
 import net.lidongdong.godcar.ui.fragment.AbsBaseFragment;
 
@@ -55,11 +54,12 @@ public class NewestFragment extends AbsBaseFragment {
 
 //        newestAdapter = new NewestAdapter(context);
 //        listView.setAdapter(newestAdapter);
-
-        vpAdapter = new NewestHandAdapter(datas, context);
-        viewPager.setAdapter(vpAdapter);
-        viewPager.setCurrentItem(datas.size() * 10);
-        handler = new Handler();
+//
+//        buildDatas();
+//        vpAdapter = new NewestHandAdapter(datas, context);
+//        viewPager.setAdapter(vpAdapter);
+//        viewPager.setCurrentItem(datas.size() * 100);
+//        handler = new Handler();
 
 //        listView = byView(R.id.newest_lv);
 //        View view = LayoutInflater.from(context).inflate(R.layout.item_newest_hand, null);
@@ -70,102 +70,101 @@ public class NewestFragment extends AbsBaseFragment {
 
     @Override
     protected void initDatas() {
-        buildDatas();//处理数据
-        startRotate();//添加轮播小点
-        addPoints();//随着轮播改变小点
-        changePoints();
-
-
+//        startRotate();//添加轮播小点
+//        addPoints();//随着轮播改变小点
+//        changePoints();
+//
+//
     }
 
-    private void changePoints() {
-        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+//    private void changePoints() {
+//        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+//            @Override
+//            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+//
+//            }
+//
+//            @Override
+//            public void onPageSelected(int position) {
+//                if (isRotate) {
+//                    //把所有小白点都设为白色
+//                    for (int i = 0; i < datas.size(); i++) {
+//                        ImageView pointIv = (ImageView) pointLl.getChildAt(i);
+//                        pointIv.setImageResource(R.mipmap.point_white);
+//
+//                    }
+//                    //设置当前位置小点为灰色
+//                    ImageView iv = (ImageView) pointLl.getChildAt(position % datas.size());
+//                    iv.setImageResource(R.mipmap.point_grey);
+//
+//                }
+//            }
+//
+//            @Override
+//            public void onPageScrollStateChanged(int state) {
+//
+//            }
+//        });
+//    }
 
-            }
+//    private void addPoints() {
+//        for (int i = 0; i < datas.size(); i++) {
+//            ImageView pointIv = new ImageView(context);
+//            pointIv.setPadding(5, 5, 5, 5);
+//            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(20, 20);
+//            pointIv.setLayoutParams(params);
+//            //设置第0页的小点为灰色
+//            if (i == 0) {
+//                pointIv.setImageResource(R.mipmap.point_grey);
+//
+//            } else {
+//                pointIv.setImageResource(R.mipmap.point_white);
+//            }
+//            pointLl.addView(pointIv);
+//        }
+//    }
 
-            @Override
-            public void onPageSelected(int position) {
-                if (isRotate) {
-                    //把所有小白点都设为白色
-                    for (int i = 0; i < datas.size(); i++) {
-                        ImageView pointIv = (ImageView) pointLl.getChildAt(i);
-                        pointIv.setImageResource(R.mipmap.dog);
-
-                    }
-                    //设置当前位置小点为灰色
-                    ImageView iv = (ImageView) pointLl.getChildAt(position % datas.size());
-                    iv.setImageResource(R.mipmap.nvjing);
-
-                }
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-        });
-    }
-
-    private void addPoints() {
-        for (int i = 0; i < datas.size(); i++) {
-            ImageView pointIv = new ImageView(context);
-            pointIv.setPadding(5, 5, 5, 5);
-            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(20, 20);
-            pointIv.setLayoutParams(params);
-            //设置第0页的小点为灰色
-            if (i == 0) {
-                pointIv.setImageResource(R.mipmap.dog);
-
-            } else {
-                pointIv.setImageResource(R.mipmap.nvjing);
-            }
-            pointLl.addView(pointIv);
-        }
-    }
-
-    private Handler handler;
-    private boolean isRotate = false;
-    private Runnable rotateRunnable;
+//    private Handler handler;
+//    private boolean isRotate = false;
+//    private Runnable rotateRunnable;
 
     /**
      * 开始轮播
      */
-    private void startRotate() {
-        rotateRunnable = new Runnable() {
-            @Override
-            public void run() {
-                int nowIndex = viewPager.getCurrentItem();
-                viewPager.setCurrentItem(++nowIndex);
-                if (isRotate) {
-                    handler.postDelayed(rotateRunnable, TIME);
-                }
-            }
-        };
-        handler.postDelayed(rotateRunnable, TIME);
-    }
+//    private void startRotate() {
+//        rotateRunnable = new Runnable() {
+//            @Override
+//            public void run() {
+//                int nowIndex = viewPager.getCurrentItem();
+//                viewPager.setCurrentItem(++nowIndex);
+//                if (isRotate) {
+//                    handler.postDelayed(rotateRunnable, TIME);
+//                }
+//            }
+//        };
+//        handler.postDelayed(rotateRunnable, TIME);
+//    }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        isRotate = true;
-    }
+//    @Override
+//    public void onResume() {
+//        super.onResume();
+//        isRotate = true;
+//    }
 
-    @Override
-    public void onPause() {
-        super.onPause();
-        isRotate = false;
-    }
+//    @Override
+//    public void onPause() {
+//        super.onPause();
+//        isRotate = false;
+//    }
 
-    private void buildDatas() {
-        datas = new ArrayList<>();
-        datas.add(new NewestHandBean(R.mipmap.nvjing));
-        datas.add(new NewestHandBean(R.mipmap.dog));
-        datas.add(new NewestHandBean(R.mipmap.nvjing));
-        datas.add(new NewestHandBean(R.mipmap.dog));
-
-    }
+//    private void buildDatas() {
+//        datas = new ArrayList<>();
+//        datas.add(new NewestHandBean(R.mipmap.big_image));
+//        datas.add(new NewestHandBean(R.mipmap.btn_normal));
+//        datas.add(new NewestHandBean(R.mipmap.icon_baoman));
+//        datas.add(new NewestHandBean(R.mipmap.btn_pressed));
+//
+//    }
 
 
 }

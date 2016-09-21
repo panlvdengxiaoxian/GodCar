@@ -16,7 +16,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="6"
-            app:tabIndicatorColor="#4562e7" />
+            app:tabIndicatorColor="@color/tabLayout" />
 
         <LinearLayout
             android:layout_width="0dp"

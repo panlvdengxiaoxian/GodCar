@@ -16,19 +16,17 @@
             android:layout_weight="8"
             android:layout_height="wrap_content"
             android:background="@android:color/background_light"
-            app:tabIndicatorColor="#1660f4"
-            />
+            app:tabIndicatorColor="@color/tabLayout" />
+
         <ImageView
             android:id="@+id/article_search_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/search"
             android:layout_gravity="center_vertical"
-            android:layout_margin="5dp"/>
+            android:layout_margin="@dimen/article_search_margin"/>
 
     </LinearLayout>
-
-
 
     <android.support.v4.view.ViewPager
         android:id="@+id/article_vp"

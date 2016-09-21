@@ -2,11 +2,23 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!--推荐页的头文字字体大小-->
+    <!--Article-头文字字体大小-->
     <dimen name="article_textSize">14sp</dimen>
-    <!--论坛页精选的顶部布局文字大小-->
+    <!--Forum-精选页的顶部布局文字大小-->
     <dimen name="handpick_textSize">16sp</dimen>
-    <!--找车-折扣界面-->
+    <!--FindCar-折扣界面-->
     <dimen name="brand_marLeft">30dp</dimen>
     <dimen name="marLeft">50dp</dimen>
+    <!--listView的分割线的margin-->
+    <dimen name="listView_margin">5dp</dimen>
+    <!--news界面的item行布局padding-->
+    <dimen name="news_item_padding">20dp</dimen>
+    <!--listView的dividerHeight-->
+    <dimen name="listView_dividerHeight">2dp</dimen>
+    <!--article_search按钮的margin-->
+    <dimen name="article_search_margin">5dp</dimen>
+    <!--setting登录相关的字体-->
+    <dimen name="setting_loginMore">20sp</dimen>
+    <dimen name="setting_login">14sp</dimen>
+
 </resources>

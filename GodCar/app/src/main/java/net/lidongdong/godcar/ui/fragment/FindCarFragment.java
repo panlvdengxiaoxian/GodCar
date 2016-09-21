@@ -22,13 +22,18 @@ import java.util.List;
 
 /**
  * Created by dllo on 16/9/8.
+ * 找车界面
  */
 public class FindCarFragment extends AbsBaseFragment implements View.OnClickListener {
+
+
     private TabLayout findcarTl;
     private ViewPager findcarVp;
     private List<Fragment> fragments;
 //     private TextView findCarAreaTv;
     private ImageView findCarSearchImg;
+
+
     @Override
     protected int setLayout() {
         return R.layout.fragment_findcar;
@@ -42,6 +47,8 @@ public class FindCarFragment extends AbsBaseFragment implements View.OnClickList
         fragment.setArguments(args);
         return fragment;
     }
+
+
     @Override
     protected void initViews() {
         findcarTl = byView(R.id.findCar_tl);
@@ -51,6 +58,11 @@ public class FindCarFragment extends AbsBaseFragment implements View.OnClickList
         findCarSearchImg.setOnClickListener(this);
 //        findCarAreaTv.setOnClickListener(this);
         fragments=new ArrayList<>();
+
+    }
+
+    @Override
+    protected void initDatas() {
         fragments.add(BrandFragment.newInstance());
         fragments.add(ChooseFragment.newInstance());
         fragments.add(DepreciateFragment.newInstance());
@@ -71,11 +83,6 @@ public class FindCarFragment extends AbsBaseFragment implements View.OnClickList
         findcarTl.getTabAt(1).setCustomView(R.layout.tab_choose);
         findcarTl.getTabAt(2).setCustomView(R.layout.tab_depreciate);
         findcarTl.getTabAt(3).setCustomView(R.layout.tab_findusedcar);
-
-    }
-
-    @Override
-    protected void initDatas() {
 
 
     }

@@ -6,7 +6,6 @@
 
     <include layout="@layout/title" />
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,9 +16,9 @@
             android:layout_height="0dp"
             android:layout_weight="2"
             android:gravity="center"
-            android:text="立即登录,体验更多"
+            android:text="@string/setting_login"
             android:textColor="#4362de"
-            android:textSize="20sp" />
+            android:textSize="@dimen/setting_loginMore" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -35,19 +34,8 @@
                 android:layout_weight="1"
                 android:drawableTop="@mipmap/user_login"
                 android:gravity="center"
-                android:text="登录"
-                android:textSize="14sp" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:drawableTop="@mipmap/login_weibo"
-                android:gravity="center"
-                android:text="微博登录"
-                android:textSize="14sp" />
+                android:text="@string/setting_login"
+                android:textSize="@dimen/setting_login" />
 
             <TextView
                 android:layout_width="0dp"
@@ -57,76 +45,55 @@
                 android:layout_weight="1"
                 android:drawableTop="@mipmap/login_wexin"
                 android:gravity="center"
-                android:text="微信登录"
-                android:textSize="14sp" />
+                android:text="@string/setting_login_weixin"
+                android:textSize="@dimen/setting_login" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/login_weibo"
+                android:gravity="center"
+                android:text="@string/setting_login_weibo"
+                android:textSize="@dimen/setting_login" />
         </LinearLayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.1"
-            android:background="#a38c8c" />
+        <View style="@style/settingfragment_View" />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginLeft="10dp"
-            android:layout_weight="1"
             android:drawableLeft="@mipmap/money"
-            android:gravity="center_vertical"
-            android:text="兑换商城" />
+            android:text="@string/setting_marketChange"
+            style="@style/settingfragment_tv" />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginLeft="10dp"
-            android:layout_weight="1"
+            style="@style/settingfragment_tv"
             android:drawableLeft="@mipmap/change"
-            android:gravity="center_vertical"
-            android:text="我的优惠券" />
+            android:text="@string/setting_mySavePager" />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginLeft="10dp"
-            android:layout_weight="1"
+            style="@style/settingfragment_tv"
             android:drawableLeft="@mipmap/time"
-            android:gravity="center_vertical"
-            android:text="我的收藏" />
+            android:text="@string/setting_myLove" />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginLeft="10dp"
-            android:layout_weight="1"
+            style="@style/settingfragment_tv"
             android:drawableLeft="@mipmap/time"
-            android:gravity="center_vertical"
-            android:text="浏览历史" />
+            android:text="@string/setting_seeHistory" />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginLeft="10dp"
-            android:layout_weight="1"
+            style="@style/settingfragment_tv"
             android:drawableLeft="@mipmap/set"
-            android:gravity="center_vertical"
-            android:text="草稿箱" />
+            android:text="@string/setting_draft" />
 
         <View
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.1"
-            android:background="#a38c8c"
-            android:gravity="center_vertical" />
+           style="@style/settingfragment_View" />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginLeft="10dp"
-            android:layout_weight="1"
+            style="@style/settingfragment_tv"
             android:drawableLeft="@mipmap/set"
-            android:gravity="center_vertical"
-            android:text="设置" />
+            android:text="@string/setting_set" />
 
     </LinearLayout>
 
