@@ -12,7 +12,7 @@
     <!--listView的分割线的margin-->
     <dimen name="listView_margin">5dp</dimen>
     <!--news界面的item行布局padding-->
-    <dimen name="news_item_padding">20dp</dimen>
+    <dimen name="news_item_paddingTop">30dp</dimen>
     <!--listView的dividerHeight-->
     <dimen name="listView_dividerHeight">2dp</dimen>
     <!--article_search按钮的margin-->

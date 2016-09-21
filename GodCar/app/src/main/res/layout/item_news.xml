@@ -1,48 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
-    <RelativeLayout
+    android:layout_gravity="center_vertical"
+    android:paddingBottom="@dimen/news_item_paddingTop"
+    android:paddingLeft="@dimen/news_item_paddingTop"
+    android:paddingRight="@dimen/news_item_paddingTop"
+    android:paddingTop="@dimen/news_item_paddingTop"
+    tools:context="net.lidongdong.godcar.ui.activity.LoginActivity">
+
+    <ImageView
+        android:id="@+id/item_news_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="@dimen/news_item_padding"
-        android:layout_gravity="center_vertical">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/nvjing"
-            android:id="@+id/item_news_img"/>
+        android:layout_centerVertical="true"
+        android:src="@mipmap/nvjing" />
+
+    <TextView
+        android:id="@+id/item_news_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/item_news_img"
+        android:text="测试1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_news_title_tv"
+        android:layout_toRightOf="@id/item_news_img"
+        android:orientation="horizontal">
+
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/item_news_time_tv"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/item_news_title_tv"
-            android:text="测试1"
-            android:layout_toRightOf="@id/item_news_img"/>
-        <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:text="测试-时间" />
+
+        <TextView
+            android:id="@+id/item_news_replyCount_tv"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/item_news_title_tv"
-            android:orientation="horizontal"
-            android:layout_toRightOf="@id/item_news_img">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/item_news_time_tv"
-                android:text="测试-时间"/>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/item_news_replyCount_tv"
-                android:text="测试-回复数"/>
+            android:layout_weight="1"
+            android:text="测试-回复数" />
 
-        </LinearLayout>
+    </LinearLayout>
 
-    </RelativeLayout>
+</RelativeLayout>
 
 
 
 
-</LinearLayout>

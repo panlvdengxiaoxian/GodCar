@@ -37,7 +37,7 @@ import net.lidongdong.godcar.R;
 import static android.Manifest.permission.READ_CONTACTS;
 
 
-public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor> {
+public class LoginActivity extends AbsActivity implements LoaderCallbacks<Cursor> {
 
     private static final int REQUEST_READ_CONTACTS = 0;
 
@@ -51,10 +51,15 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private View mProgressView;
     private View mLoginFormView;
 
+
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+    protected int setLayout() {
+        return R.layout.activity_login;
+    }
+
+    @Override
+    protected void initViews() {
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
 
@@ -77,9 +82,14 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 attemptLogin();
             }
         });
-
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
+
+    }
+
+    @Override
+    protected void initDatas() {
+
     }
 
     private void populateAutoComplete() {

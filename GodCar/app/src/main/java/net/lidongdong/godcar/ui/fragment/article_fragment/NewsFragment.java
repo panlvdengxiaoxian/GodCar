@@ -5,6 +5,9 @@ import android.widget.ListView;
 
 import net.lidongdong.godcar.R;
 import net.lidongdong.godcar.model.bean.NewsBean;
+import net.lidongdong.godcar.model.bean.WebStatic;
+import net.lidongdong.godcar.model.net.IVolleyResult;
+import net.lidongdong.godcar.model.net.VolleyInstance;
 import net.lidongdong.godcar.ui.adapter.NewsAdapter;
 import net.lidongdong.godcar.ui.fragment.AbsBaseFragment;
 
@@ -16,6 +19,7 @@ import java.util.List;
  * 新闻界面
  */
 public class NewsFragment extends AbsBaseFragment {
+
     private ListView newsLv;
     private List<NewsBean.ResultBean.NewslistBean> datas;
     private NewsAdapter newsAdapter;
@@ -35,15 +39,16 @@ public class NewsFragment extends AbsBaseFragment {
 
     @Override
     protected void initViews() {
-        newsLv = (ListView) newsLv.findViewById(R.id.news_lv);
+        newsLv = byView(R.id.news_lv);
         datas=new ArrayList<>();
         newsAdapter=new NewsAdapter(context);
+        newsAdapter.setDatas(datas);
+        newsLv.setAdapter(newsAdapter);
 
     }
 
     @Override
     protected void initDatas() {
-        newsAdapter.setDatas(datas);
-        newsLv.setAdapter(newsAdapter);
+//        VolleyInstance.getInstance().startRequest(WebStatic.ARTICLE_NEWS_URL,);
     }
 }

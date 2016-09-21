@@ -7,6 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import net.lidongdong.godcar.R;
+import net.lidongdong.godcar.ui.activity.LoginActivity;
 import net.lidongdong.godcar.ui.activity.SearchActivity;
 
 /**
@@ -15,6 +16,7 @@ import net.lidongdong.godcar.ui.activity.SearchActivity;
 public class SettingFragment extends AbsBaseFragment implements View.OnClickListener {
     private TextView titleFindTv;
     private ImageView searchImg;
+    private TextView loginMoreTv;
 
     public static SettingFragment newInstance() {
 
@@ -34,7 +36,9 @@ public class SettingFragment extends AbsBaseFragment implements View.OnClickList
     protected void initViews() {
         titleFindTv=byView(R.id.title_find_tv);
         searchImg=byView(R.id.title_search_img);
+        loginMoreTv=byView(R.id.setting_loginMore);
         searchImg.setOnClickListener(this);
+        loginMoreTv.setOnClickListener(this);
     }
 
     @Override
@@ -48,6 +52,9 @@ public class SettingFragment extends AbsBaseFragment implements View.OnClickList
         switch (v.getId()){
             case R.id.title_search_img:
                 goTo(SearchActivity.class);
+                break;
+            case R.id.setting_loginMore:
+                goTo(LoginActivity.class);
                 break;
         }
     }
