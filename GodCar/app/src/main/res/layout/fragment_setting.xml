@@ -64,9 +64,9 @@
         <View style="@style/settingfragment_View" />
 
         <TextView
-            style="@style/settingfragment_tv"
             android:drawableLeft="@mipmap/money"
-            android:text="@string/setting_marketChange" />
+            android:text="@string/setting_marketChange"
+            style="@style/settingfragment_tv" />
 
         <TextView
             style="@style/settingfragment_tv"
@@ -88,7 +88,8 @@
             android:drawableLeft="@mipmap/set"
             android:text="@string/setting_draft" />
 
-        <View style="@style/settingfragment_View" />
+        <View
+           style="@style/settingfragment_View" />
 
         <TextView
             style="@style/settingfragment_tv"

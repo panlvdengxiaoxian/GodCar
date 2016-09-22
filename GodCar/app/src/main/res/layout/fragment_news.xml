@@ -5,12 +5,12 @@
     android:orientation="vertical">
 
     <ListView
-        android:id="@+id/news_lv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="@dimen/listView_margin"
+        android:id="@+id/news_lv"
         android:divider="@color/listView"
         android:dividerHeight="@dimen/listView_dividerHeight"
-        android:smoothScrollbar="false" />
+        android:layout_margin="@dimen/listView_margin"
+        android:smoothScrollbar="false"/>
 
 </LinearLayout>
