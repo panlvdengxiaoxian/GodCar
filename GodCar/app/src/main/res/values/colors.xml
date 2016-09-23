@@ -4,7 +4,7 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <!--ListView分割线的颜色-->
-    <color name="listView">#dcbdbd</color>
+    <color name="listView">#efd8d8</color>
     <!--articleFragment-->
     <!--tabLayout下划线颜色-->
     <color name="tabLayout">#1660f4</color>

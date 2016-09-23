@@ -41,5 +41,15 @@
         <item name="android:layout_weight">1</item>
         <item name="android:gravity">center_vertical</item>
     </style>
+    <!--listview通用-->
+
+    <style name="style_listview">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:divider">@color/listView</item>
+        <item name="android:dividerHeight">@dimen/listView_dividerHeight</item>
+        <item name="android:layout_margin">@dimen/listView_margin</item>
+        <item name="android:smoothScrollbar">false</item>
+    </style>
 
 </resources>

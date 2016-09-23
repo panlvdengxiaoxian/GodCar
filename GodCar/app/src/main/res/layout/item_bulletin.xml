@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/item_fasereport_titleTv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="30dp"
+        android:text="测试"/>
+
+    <ImageView
+        android:layout_margin="10dp"
+        android:id="@+id/item_fasereport_showImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="播报结束"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:textColor="#437ee4"/>
+
+        <TextView
+            android:id="@+id/item_fasereport_peopleCoundTv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="播报结束"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:id="@+id/item_fasereport_timeTv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="15dp"
+            android:text="播报结束"
+            android:gravity="center"
+            android:textSize="10sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

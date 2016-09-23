@@ -7,23 +7,23 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp">
+        android:layout_margin="@dimen/common_rl_margin">
 
         <ImageView
             android:id="@+id/car"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_margin="@dimen/common_margin_img"
             android:src="@mipmap/car" />
 
         <TextView
             android:id="@+id/car_show"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="@dimen/common_marginTop_tv"
             android:layout_toRightOf="@id/car"
             android:text="@string/common_carShow"
-            android:textSize="15dp" />
+            android:textSize="@dimen/common_textsize" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -31,7 +31,7 @@
             android:layout_below="@id/car_show"
             android:layout_toRightOf="@id/car"
             android:text="@string/common_findCarToTeam"
-            android:textSize="10dp" />
+            android:textSize="@dimen/common_textsize_down" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -43,55 +43,55 @@
             android:id="@+id/car_"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_margin="@dimen/common_margin_img"
             android:src="@mipmap/area" />
 
         <TextView
             android:id="@+id/car_show_"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="@dimen/common_marginTop_tv"
             android:layout_toRightOf="@id/car_"
-            android:text="地区论坛"
-            android:textSize="15dp" />
+            android:text="@string/common_area_"
+            android:textSize="@dimen/common_textsize" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/car_show_"
             android:layout_toRightOf="@id/car_"
-            android:text="为你的爱车找到队伍"
-            android:textSize="10dp" />
+            android:text="@string/common_area"
+            android:textSize="@dimen/common_textsize_down" />
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp">
+        android:layout_margin="@dimen/common_rl_margin">
 
         <ImageView
             android:id="@+id/car_car"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_margin="@dimen/common_margin_img"
             android:src="@mipmap/activity" />
 
         <TextView
             android:id="@+id/car_show_show"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="@dimen/common_marginTop_tv"
             android:layout_toRightOf="@id/car_car"
-            android:text="车系论坛"
-            android:textSize="15dp" />
+            android:text="@string/common_sort_"
+            android:textSize="@dimen/common_textsize" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/car_show_show"
             android:layout_toRightOf="@id/car_car"
-            android:text="为你的爱车找到队伍"
-            android:textSize="10dp" />
+            android:text="@string/common_sort"
+            android:textSize="@dimen/common_textsize_down" />
     </RelativeLayout>
 
 </LinearLayout>

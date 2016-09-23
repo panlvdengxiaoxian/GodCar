@@ -2,11 +2,28 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="10dp"
     android:orientation="vertical">
-
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="热帖" />
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:text="24小时内热门"
+        android:layout_margin="10dp"
+        android:textSize="12sp"
+        android:textColor="#5c64c4"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#a18787"/>
+
+    <ListView
+        android:id="@+id/hot_topic_listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_weight="10"
+        android:divider="#f00"
+        android:dividerHeight="1dp"/>
 
 </LinearLayout>

@@ -5,20 +5,33 @@
     <!--Article-头文字字体大小-->
     <dimen name="article_textSize">14sp</dimen>
     <!--Forum-精选页的顶部布局文字大小-->
-    <dimen name="handpick_textSize">16sp</dimen>
+    <dimen name="handpick_textSize">14sp</dimen>
     <!--FindCar-折扣界面-->
     <dimen name="brand_marLeft">30dp</dimen>
     <dimen name="marLeft">50dp</dimen>
     <!--listView的分割线的margin-->
     <dimen name="listView_margin">5dp</dimen>
     <!--news界面的item行布局padding-->
-    <dimen name="news_item_padding">20dp</dimen>
+    <dimen name="news_item_padding">16dp</dimen>
     <!--listView的dividerHeight-->
-    <dimen name="listView_dividerHeight">2dp</dimen>
+    <dimen name="listView_dividerHeight">1dp</dimen>
     <!--article_search按钮的margin-->
     <dimen name="article_search_margin">5dp</dimen>
     <!--setting登录相关的字体-->
     <dimen name="setting_loginMore">20sp</dimen>
     <dimen name="setting_login">14sp</dimen>
+    <!--优加-->
+    <dimen name="unihub_textsize">14sp</dimen>
+    <dimen name="unihub_margin">10dp</dimen>
+    <!--选择-->
+    <dimen name="choose_tv">17sp</dimen>
+    <dimen name="choose_marginleft">10dp</dimen>
+    <dimen name="choose_hot_tv">12sp</dimen>
+    <!--common-->
+    <dimen name="common_textsize">15sp</dimen>
+    <dimen name="common_textsize_down">10sp</dimen>
+    <dimen name="common_rl_margin">10dp</dimen>
+    <dimen name="common_margin_img">5dp</dimen>
+    <dimen name="common_marginTop_tv">15dp</dimen>
 
 </resources>

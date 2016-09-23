@@ -17,6 +17,49 @@
     <string name="common_area">一群爱车的man</string>
     <string name="common_sort_">车系论坛</string>
     <string name="common_sort">逗逼南波湾</string>
+    <!--推荐-->
+    <array name="titles">
+        <item>全部</item>
+        <item>媳妇当车模</item>
+        <item>美人记</item>
+        <item>论坛红人馆</item>
+        <item>论坛讲师</item>
+        <item>汽车之家十年</item>
+        <item>精挑细选</item>
+        <item>现身说法</item>
+        <item>高端阵地</item>
+        <item>汇买车</item>
+        <item>行车点评</item>
+        <item>超级驾驶员</item>
+        <item>海外购车</item>
+        <item>经典老车</item>
+        <item>妹子选车</item>
+        <item>优惠购车</item>
+        <item>原创大片</item>
+        <item>顶配风采</item>
+        <item>改装有理</item>
+        <item>养车有道</item>
+        <item>首发阵营</item>
+        <item>新车直播</item>
+        <item>历史选题</item>
+        <item>摩友天地</item>
+        <item>蜜月之旅</item>
+        <item>甜蜜婚礼</item>
+        <item>摄影课堂</item>
+        <item>车友聚会</item>
+        <item>单车部落</item>
+        <item>杂谈俱乐部</item>
+        <item>华北游记</item>
+        <item>西南游记</item>
+        <item>东北游记</item>
+        <item>西北游记</item>
+        <item>华中游记</item>
+        <item>华南游记</item>
+        <item>华东游记</item>
+        <item>港澳台游记</item>
+        <item>海外游记</item>
+        <item>沧海遗珠</item>
+    </array>
     <!--SettingFragment相关-->
     <string name="setting_loginMore">立即登录,体验更多</string>
     <string name="setting_login">登录</string>
@@ -29,8 +72,10 @@
     <string name="setting_draft">草稿箱</string>
     <string name="setting_set">设置</string>
     <string name="title_activity_login">Sign in</string>
+    <!--优加-->
+    <string name="unihub_tv">优创</string>
 
-    <!-- Strings related to login -->
+    <!-- login 相关-->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
     <string name="action_sign_in">Sign in or register</string>
@@ -42,5 +87,8 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <!--选择-->
+    <string name="choose_tv">条件</string>
+    <string name="choose_hot">热门车系</string>
 
 </resources>

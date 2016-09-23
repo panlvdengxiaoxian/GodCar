@@ -2,7 +2,43 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_margin="10dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp">
+        <TextView
+            android:id="@+id/brand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="全部品牌"
+            android:textSize="12sp"/>
+        <ImageView
+            android:id="@+id/img_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/brand"
+            android:src="@mipmap/right"
+            android:layout_marginLeft="3dp"/>
+        <TextView
+            android:id="@+id/jibie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="全部级别"
+            android:textSize="12sp"
+            android:layout_toRightOf="@id/img_"
+            android:layout_marginLeft="40dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/jibie"
+            android:src="@mipmap/right"
+            android:layout_marginLeft="3dp"/>
+    </RelativeLayout>
 
+    <ListView
+        android:id="@+id/fragment_bulletin_lv"
+        style="@style/style_listview"/>
 
 </LinearLayout>

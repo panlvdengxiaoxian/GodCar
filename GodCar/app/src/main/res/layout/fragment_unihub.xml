@@ -12,19 +12,23 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="优创"
-            android:textSize="20sp" />
+            android:layout_margin="@dimen/unihub_margin"
+            android:text="@string/unihub_tv"
+            android:textSize="@dimen/unihub_textsize"
+            android:layout_centerVertical="true"/>
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_margin="10dp"
-            android:src="@mipmap/article_down" />
-
+            android:layout_margin="@dimen/unihub_margin"
+            android:src="@mipmap/down_"
+            android:layout_centerVertical="true"/>
 
     </RelativeLayout>
+    <ListView
+        android:id="@+id/fragment_unihub_lv"
+        style="@style/style_listview"/>
 
 
 </LinearLayout>

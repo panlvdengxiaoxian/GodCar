@@ -1,91 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_foot"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/handpick_rv"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbars="none" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/fragment_handpick_recycler"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="8"
+                android:layout_gravity="center_vertical"/>
 
-    <!--<HorizontalScrollView-->
+            <ImageView
+                android:padding="10dp"
+                android:id="@+id/handpick_popWindow_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/four_kou"
+                android:layout_marginBottom="5dp"/>
 
-    <!--android:id="@+id/handpick_hs"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:background="@android:color/background_light"-->
-    <!--android:scrollbars="none">-->
+        </LinearLayout>
 
-    <!--<RadioGroup-->
-    <!--android:id="@+id/handpick_rg"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:orientation="horizontal">-->
+        <FrameLayout
+            android:id="@+id/fragment_picRecommend_replaceView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8" />
+    </LinearLayout>
 
-    <!--<RadioButton-->
-    <!--android:id="@+id/rb1"-->
-    <!--style="@style/styles_handpick"-->
-    <!--android:text="媳妇当车模" />-->
+    <LinearLayout
+        android:id="@+id/handpick_lL"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:background="#fff"
+        android:orientation="vertical">
 
-    <!--<RadioButton-->
-    <!--android:id="@+id/rb2"-->
-    <!--style="@style/styles_handpick"-->
-    <!--android:text="论坛红人" />-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
-    <!--<RadioButton-->
-    <!--android:id="@+id/rb3"-->
-    <!--style="@style/styles_handpick"-->
-    <!--android:text="美人计" />-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="9"
+                android:gravity="center"
+                android:text="栏目分类"
+                android:textColor="#000"
+                android:textSize="20sp" />
 
-    <!--<RadioButton-->
-    <!--android:id="@+id/rb4"-->
-    <!--style="@style/styles_handpick"-->
-    <!--android:text="都比4" />-->
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@null"
+                android:gravity="end"
+                android:text="关闭"
+                android:textColor="#FF182BD9"
+                android:textSize="20sp" />
+        </LinearLayout>
 
-    <!--<RadioButton-->
-    <!--android:id="@+id/rb5"-->
-    <!--style="@style/styles_handpick"-->
-    <!--android:text="都比5" />-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/handpick_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
-    <!--<RadioButton-->
-    <!--android:id="@+id/rb6"-->
-    <!--style="@style/styles_handpick"-->
-    <!--android:text="都比6" />-->
-
-    <!--<RadioButton-->
-    <!--android:id="@+id/rb7"-->
-    <!--style="@style/styles_handpick"-->
-    <!--android:text="都比7" />-->
-
-    <!--<RadioButton-->
-    <!--android:id="@+id/rb8"-->
-    <!--style="@style/styles_handpick"-->
-    <!--android:text="都比8" />-->
-
-    <!--<RadioButton-->
-    <!--android:id="@+id/rb9"-->
-    <!--style="@style/styles_handpick"-->
-    <!--android:text="都比9" />-->
-
-    <!--</RadioGroup>-->
-
-
-    <!--</HorizontalScrollView>-->
-    <!--&lt;!&ndash;四个口&ndash;&gt;-->
-    <!--<ImageView-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_alignParentRight="true"-->
-    <!--android:src="@mipmap/sum" />-->
-
-
-    <!--<FrameLayout-->
-    <!--android:id="@+id/handpick_fl"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="0dp"-->
-    <!--android:layout_weight="1" />-->
-
-</RelativeLayout>
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>
