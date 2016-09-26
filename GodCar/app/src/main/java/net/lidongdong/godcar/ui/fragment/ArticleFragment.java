@@ -73,7 +73,7 @@ public class ArticleFragment extends AbsBaseFragment implements View.OnClickList
         fragments.add(NewsFragment.newInstance(WebVelues.TREVEL));
         fragments.add(NewsFragment.newInstance(WebVelues.TALKPERSON));
         fragments.add(CutureFragment.newInstance(WebVelues.CULTURE));
-        articleVp.setAdapter(new FragmentPagerAdapter(getFragmentManager()) {
+        articleVp.setAdapter(new FragmentPagerAdapter(getChildFragmentManager()) {
             @Override
             public Fragment getItem(int position) {
                 return fragments.get(position);

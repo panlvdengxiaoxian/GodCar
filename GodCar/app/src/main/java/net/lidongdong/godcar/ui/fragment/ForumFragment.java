@@ -10,7 +10,6 @@ import android.view.View;
 import android.widget.ImageView;
 
 import net.lidongdong.godcar.R;
-import net.lidongdong.godcar.model.net.WebVelues;
 import net.lidongdong.godcar.ui.activity.SearchActivity;
 import net.lidongdong.godcar.ui.fragment.Forum_fragment.CommonFragment;
 import net.lidongdong.godcar.ui.fragment.Forum_fragment.HandpickFragment;

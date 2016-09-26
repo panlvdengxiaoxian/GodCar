@@ -1,6 +1,8 @@
 package net.lidongdong.godcar.ui.fragment.article_fragment;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.widget.ListView;
 
 import com.android.volley.Request;
@@ -16,7 +18,9 @@ import net.lidongdong.godcar.model.bean.NewsBean;
 import net.lidongdong.godcar.ui.adapter.NewsAdapter;
 import net.lidongdong.godcar.ui.app.MyApp;
 import net.lidongdong.godcar.ui.fragment.AbsBaseFragment;
+import net.lidongdong.godcar.view.AutoHomeListView;
 
+import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,9 +28,36 @@ import java.util.List;
  * Created by dllo on 16/9/9.
  * 新闻界面
  */
-public class NewsFragment extends AbsBaseFragment {
-    private ListView newsLv;
+public class NewsFragment extends AbsBaseFragment implements AutoHomeListView.OnAutoHomeRefreshListener {
+    private AutoHomeListView newsLv;
     private NewsAdapter newsAdapter;
+    List<NewsBean.ResultBean.NewslistBean> datas;
+
+    private final int REFRESH_COMPLETE = 0;
+    private InterHandler mInterHandler=new InterHandler(this);
+
+    private class InterHandler extends Handler{
+        private WeakReference<NewsFragment> mFragments;
+        public InterHandler(NewsFragment fragment){
+            mFragments=new WeakReference<NewsFragment>(fragment);
+        }
+        public void handleMessage(Message msg){
+            NewsFragment fragment=mFragments.get();
+            if (fragment!=null){
+                switch (msg.what){
+                    case REFRESH_COMPLETE:
+                        fragment.newsLv.setOnRefreshComplete();
+                        fragment.newsAdapter.notifyDataSetChanged();
+                        fragment.newsLv.setSelection(0);
+                        break;
+                }
+
+            }else {
+                super.handleMessage(msg);
+            }
+        }
+
+    }
 
     public static NewsFragment newInstance(String str) {
 
@@ -46,7 +77,8 @@ public class NewsFragment extends AbsBaseFragment {
     @Override
     protected void initViews() {
         newsLv = byView(R.id.news_lv);
-
+        datas=new ArrayList<>();
+        newsLv.setOnAutoHomeRefreshListener(this);
 
     }
 
@@ -63,7 +95,7 @@ public class NewsFragment extends AbsBaseFragment {
 
                 Gson gson=new Gson();
                 NewsBean bean=gson.fromJson(response,NewsBean.class);
-                List<NewsBean.ResultBean.NewslistBean> datas=bean.getResult().getNewslist();
+                datas=bean.getResult().getNewslist();
                 newsAdapter.setDatas(datas);
             }
         }, new Response.ErrorListener() {
@@ -73,5 +105,23 @@ public class NewsFragment extends AbsBaseFragment {
             }
         });
         queue.add(request);
+
+    }
+
+    @Override
+    public void onRefresh() {
+        new Thread(new Runnable() {
+
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(3000);
+                    mInterHandler.sendEmptyMessage(REFRESH_COMPLETE);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+
     }
 }

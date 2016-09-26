@@ -22,7 +22,11 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/selector_article"
-            android:button="@null" />
+            android:button="@null"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+
+            />
 
         <RadioButton
             android:id="@+id/forum_rb"
@@ -30,7 +34,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/selector_forum"
-            android:button="@null" />
+            android:button="@null"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"/>
 
         <RadioButton
             android:id="@+id/findcar_rb"
@@ -38,7 +44,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/selector_findcar"
-            android:button="@null" />
+            android:button="@null"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"/>
 
         <RadioButton
             android:id="@+id/find_rb"
@@ -46,7 +54,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/selector_find"
-            android:button="@null" />
+            android:button="@null"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"/>
 
         <RadioButton
             android:id="@+id/setting_rb"
@@ -54,7 +64,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/selector_setting"
-            android:button="@null"/>
+            android:button="@null"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"/>
 
     </RadioGroup>
 

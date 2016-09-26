@@ -94,8 +94,10 @@ public class HandpickFragment extends AbsBaseFragment implements View.OnClickLis
                 FragmentTransaction transaction = managers.beginTransaction();
                 transaction.replace(R.id.fragment_picRecommend_replaceView, AllFragment.newInstance(list[pos]));
                 transaction.commit();
+
             }
         });
+        //设置默认fragment
         FragmentManager fragmentManager = getChildFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.fragment_picRecommend_replaceView, AllFragment.newInstance(WebVelues.FORUM_ANSLESE_0));
@@ -107,52 +109,14 @@ public class HandpickFragment extends AbsBaseFragment implements View.OnClickLis
     }
 
     private void buildDatas() {
+        //利用循环从数组array向list中添加元素
         data = new ArrayList<>();
-        data.
-//        data.add("全部");
-//        data.add("媳妇当车模");
-//        data.add("美人" + "'记'");
-//        data.add("论坛红人馆");
-//        data.add("论坛讲师");
-//        data.add("汽车之家十年");
-//        data.add("精挑细选");
-//        data.add("现身说法");
-//        data.add("高端阵地");
-//        data.add("电动车");
-//        data.add("汇买车");
-//        data.add("行车点评");
-//        data.add("超级驾驶员");
-//        data.add("海外购车");
-//        data.add("经典老车");
-//        data.add("妹子选车");
-//        data.add("优惠购车");
-//        data.add("原创大片");
-//        data.add("顶配风采");
-//        data.add("改装有理");
-//        data.add("养车有道");
-//        data.add("首发阵营");
-//        data.add("新车直播");
-//        data.add("历史选题");
-//        data.add("摩友天地");
-//        data.add("蜜月之旅");
-//        data.add("甜蜜婚礼");
-//        data.add("摄影课堂");
-//        data.add("车友聚会");
-//        data.add("单车部落");
-//        data.add("杂谈俱乐部");
-//        data.add("华北游记");
-//        data.add("西南游记");
-//        data.add("东北游记");
-//        data.add("西北游记");
-//        data.add("华中游记");
-//        data.add("华南游记");
-//        data.add("华东游记");
-//        data.add("港澳台游记");
-//        data.add("海外游记");
-//        data.add("沧海遗珠");
+        String[] datas=getResources().getStringArray(R.array.titles);
+        for (int i = 0; i < 41; i++) {
+            data.add(datas[i]);
+        }
+
     }
-
-
     @Override
     public void onClick(View v) {
         switch (v.getId()) {

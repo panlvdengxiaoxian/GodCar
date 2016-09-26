@@ -68,7 +68,7 @@ public class FindCarFragment extends AbsBaseFragment implements View.OnClickList
         fragments.add(DepreciateFragment.newInstance());
         fragments.add(FindUesedCarFragment.newInstance());
         //有问题
-        findcarVp.setAdapter(new FragmentPagerAdapter(getFragmentManager()) {
+        findcarVp.setAdapter(new FragmentPagerAdapter(getChildFragmentManager()) {
             @Override
             public Fragment getItem(int position) {
                 return fragments.get(position);
