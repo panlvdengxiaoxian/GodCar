@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import net.lidongdong.godcar.R;
+import net.lidongdong.godcar.model.net.WebVelues;
 import net.lidongdong.godcar.ui.activity.SearchActivity;
 import net.lidongdong.godcar.ui.fragment.FndCarFragment.BrandFragment;
 import net.lidongdong.godcar.ui.fragment.FndCarFragment.ChooseFragment;
@@ -63,9 +64,9 @@ public class FindCarFragment extends AbsBaseFragment implements View.OnClickList
 
     @Override
     protected void initDatas() {
-        fragments.add(BrandFragment.newInstance());
-        fragments.add(ChooseFragment.newInstance());
-        fragments.add(DepreciateFragment.newInstance());
+        fragments.add(BrandFragment.newInstance(WebVelues.BRAND));
+        fragments.add(ChooseFragment.newInstance(WebVelues.CHOOSE));
+        fragments.add(DepreciateFragment.newInstance(WebVelues.DEPRECIATE));
         fragments.add(FindUesedCarFragment.newInstance());
         //有问题
         findcarVp.setAdapter(new FragmentPagerAdapter(getChildFragmentManager()) {

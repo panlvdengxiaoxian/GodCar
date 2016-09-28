@@ -3,7 +3,6 @@
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
     android:orientation="vertical">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -19,7 +18,7 @@
             android:paddingRight="20dp"
             android:src="@mipmap/nvjing"
             android:paddingLeft="10dp"
-           />
+            />
 
         <TextView
             android:id="@+id/item_unihub_authorTv"
@@ -31,6 +30,7 @@
             android:text="测试" />
 
     </LinearLayout>
+
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -85,7 +85,6 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
         </LinearLayout>
-        <!--以后要替换成imageView-->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"

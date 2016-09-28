@@ -49,4 +49,11 @@
                 android:text="@string/depreciate_area" />
         </RelativeLayout>
     </HorizontalScrollView>
+
+    <ListView
+        android:id="@+id/depreciate_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#f5e6e6"
+        android:dividerHeight="10dp" />
 </LinearLayout>

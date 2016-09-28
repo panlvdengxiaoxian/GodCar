@@ -56,6 +56,23 @@ public class VolleyInstance {
         return instance;
     }
    /**~~~~~~~~~~~~~~~  请求数据   ~~~~~~~~~~~~~~~~*/
+   public void startRequest(String url, final IVolleyResult result){
+       StringRequest sr = new StringRequest(url,
+               new Response.Listener<String>() {
+                   @Override
+                   public void onResponse(String response) {
+                       // 如果请求成功,将返回数据存储到接口里
+                       result.success(response);
+                   }
+               }, new Response.ErrorListener() {
+           @Override
+           public void onErrorResponse(VolleyError error) {
+               // 请求失败,通过接口通知调用者请求失败
+               result.failure();
+           }
+       });
+      getInstance().addQueue(sr);
+   }
     /**
      * 对外提供的方法
      * @param url

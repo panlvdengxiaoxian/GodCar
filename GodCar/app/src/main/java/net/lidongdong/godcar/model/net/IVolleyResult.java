@@ -11,5 +11,7 @@ public interface IVolleyResult {
      * @param who 谁发出的网络请求
      */
     void success(String str,int who);
+    void success(String str);
+
     void failure();
 }

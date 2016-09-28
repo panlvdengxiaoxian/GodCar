@@ -12,6 +12,7 @@ import net.lidongdong.godcar.R;
 
 /**
  * Created by dllo on 16/9/26.
+ *
  */
 public class AutoHome extends View{
     private Bitmap backGroundBitmap;

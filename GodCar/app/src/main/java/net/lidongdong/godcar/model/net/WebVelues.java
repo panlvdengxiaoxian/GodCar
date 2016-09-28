@@ -121,6 +121,13 @@ public class WebVelues {
     //沧海遗珠
     /**---------热帖----------**/
     public static final String HOTPAGER = "http://club.app.autohome.com.cn/club_v6.1.0/club/shotfoumlist-pm1-p1-s50.json";
-
-
+    /**---------筛选----------**/
+    public static final String CHOOSE="http://cars.app.autohome.com.cn/cars_v5.8.0/cars/gethotseries-a2-pm2-v6.1.0-p1-s20.json";
+    /**---------降价----------**/
+    public static  final String DEPRECIATE="http://183.232.160.141/cars.app.autohome.com.cn/dealer_v6.0.0/dealer/pdspecs-pm2-pi210000-c210200-o0-b0-ss0-sp0-p1-s20-l0-minp0-maxp0-lon121.551111-lat38.889688.json";
+    /**---------品牌----------**/
+    public static final String BRAND_HOT="http://223.99.255.20/cars.app.autohome.com.cn/dealer_v5.7.0/dealer/hotbrands-pm2.json";
+    public static final String BRAND="http://app.api.autohome.com.cn/autov5.0.0/news/brandsfastnews-pm1-ts0.json";
+    /**---------地区--------**/
+    public static final String AREA="http://comm.app.autohome.com.cn/news/province-pm2-ts0.json";
 }

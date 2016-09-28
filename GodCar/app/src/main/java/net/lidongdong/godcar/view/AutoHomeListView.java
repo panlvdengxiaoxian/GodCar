@@ -19,6 +19,7 @@ import net.lidongdong.godcar.R;
 
 /**
  * Created by dllo on 16/9/26.
+ * 上拉刷新的listView
  */
 public class AutoHomeListView extends ListView implements AbsListView.OnScrollListener{
     private static final int DONE = 0;

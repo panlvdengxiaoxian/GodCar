@@ -58,7 +58,6 @@ public class NewsFragment extends AbsBaseFragment implements AutoHomeListView.On
         }
 
     }
-
     public static NewsFragment newInstance(String str) {
 
         Bundle args = new Bundle();
