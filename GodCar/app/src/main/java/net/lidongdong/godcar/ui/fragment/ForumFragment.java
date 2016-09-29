@@ -51,7 +51,7 @@ public class ForumFragment extends AbsBaseFragment implements View.OnClickListen
         fragments.add(HandpickFragment.newInstance());
         fragments.add(HotPagerFragment.newInstance(WebVelues.HOTPAGER));
         fragments.add(CommonFragment.newInstance());
-        forumVp.setAdapter(new FragmentPagerAdapter(getFragmentManager()) {
+        forumVp.setAdapter(new FragmentPagerAdapter(getChildFragmentManager()) {
             @Override
             public Fragment getItem(int position) {
                 return fragments.get(position);

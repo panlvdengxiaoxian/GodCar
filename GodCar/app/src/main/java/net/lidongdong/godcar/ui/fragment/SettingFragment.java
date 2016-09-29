@@ -47,14 +47,13 @@ public class SettingFragment extends AbsBaseFragment implements View.OnClickList
     protected void initDatas() {
        //标题栏设置(去掉发现)
         titleFindTv.setVisibility(View.GONE);
+        searchImg.setVisibility(View.GONE);
+
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.title_search_img:
-                goTo(SearchActivity.class);
-                break;
             case R.id.setting_loginMore:
                 goTo(LoginActivity.class);
                 break;

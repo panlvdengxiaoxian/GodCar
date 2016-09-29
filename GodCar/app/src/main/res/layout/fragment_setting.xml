@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/background_light"
     android:orientation="vertical">
 
     <include layout="@layout/title" />
@@ -15,9 +16,9 @@
             android:id="@+id/setting_loginMore"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="2"
+            android:layout_weight="1.5"
             android:gravity="center"
-            android:text="@string/setting_login"
+            android:text="@string/setting_login_"
             android:textColor="#4362de"
             android:textSize="@dimen/setting_loginMore" />
 
@@ -33,7 +34,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:drawableTop="@mipmap/user_login"
+                android:drawableTop="@mipmap/qq"
                 android:gravity="center"
                 android:text="@string/setting_login"
                 android:textSize="@dimen/setting_login" />
@@ -63,38 +64,117 @@
 
         <View style="@style/settingfragment_View" />
 
-        <TextView
-            android:drawableLeft="@mipmap/money"
-            android:text="@string/setting_marketChange"
-            style="@style/settingfragment_tv" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
 
-        <TextView
-            style="@style/settingfragment_tv"
-            android:drawableLeft="@mipmap/change"
-            android:text="@string/setting_mySavePager" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:src="@mipmap/modlerchange" />
 
-        <TextView
-            style="@style/settingfragment_tv"
-            android:drawableLeft="@mipmap/time"
-            android:text="@string/setting_myLove" />
+            <TextView
+                style="@style/settingfragment_tv"
+                android:text="@string/setting_marketChange" />
 
-        <TextView
-            style="@style/settingfragment_tv"
-            android:drawableLeft="@mipmap/time"
-            android:text="@string/setting_seeHistory" />
+        </LinearLayout>
 
-        <TextView
-            style="@style/settingfragment_tv"
-            android:drawableLeft="@mipmap/set"
-            android:text="@string/setting_draft" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
 
-        <View
-           style="@style/settingfragment_View" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:src="@mipmap/mysave" />
 
-        <TextView
-            style="@style/settingfragment_tv"
-            android:drawableLeft="@mipmap/set"
-            android:text="@string/setting_set" />
+            <TextView
+                style="@style/settingfragment_tv"
+                android:text="@string/setting_mySavePager" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:src="@mipmap/see_history_" />
+
+            <TextView
+                style="@style/settingfragment_tv"
+                android:text="@string/setting_seeHistory" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:src="@mipmap/wrate" />
+
+            <TextView
+                style="@style/settingfragment_tv"
+                android:text="@string/setting_draft" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:src="@mipmap/star_" />
+
+            <TextView
+                style="@style/settingfragment_tv"
+                android:text="@string/setting_myLove" />
+        </LinearLayout>
+
+        <View style="@style/settingfragment_View" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:src="@mipmap/setting" />
+
+            <TextView
+                style="@style/settingfragment_tv"
+                android:text="@string/setting_set" />
+
+
+        </LinearLayout>
+
 
     </LinearLayout>
 

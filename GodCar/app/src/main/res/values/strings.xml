@@ -62,8 +62,9 @@
         <item>沧海遗珠</item>
     </array>
     <!--SettingFragment相关-->
+    <string name="setting_login_">登录</string>
     <string name="setting_loginMore">立即登录,体验更多</string>
-    <string name="setting_login">登录</string>
+    <string name="setting_login">QQ登录</string>
     <string name="setting_login_weibo">微博登录</string>
     <string name="setting_login_weixin">微信登录</string>
     <string name="setting_marketChange">商城兑换</string>
