@@ -2,12 +2,12 @@ package net.lidongdong.godcar.ui.fragment.article_fragment;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Message;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 
 import net.lidongdong.godcar.R;
 import net.lidongdong.godcar.model.bean.NewFragmentRoateBean;
@@ -18,7 +18,9 @@ import net.lidongdong.godcar.ui.activity.NewestFragmentToAty;
 import net.lidongdong.godcar.ui.adapter.NewestAdapter;
 import net.lidongdong.godcar.ui.adapter.NewestHandAdapter;
 import net.lidongdong.godcar.ui.fragment.AbsBaseFragment;
+import net.lidongdong.godcar.view.AutoHomeListView;
 
+import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,14 +32,39 @@ import com.google.gson.Gson;
  * Created by ccc on 16/9/13.
  * 推荐界面的最新页面
  */
-public class NewestFragment extends AbsBaseFragment {
+public class NewestFragment extends AbsBaseFragment implements AutoHomeListView.OnAutoHomeRefreshListener {
     private static final int TIME = 3000;
-    private ListView lv;
+    private AutoHomeListView lv;
     private NewestAdapter adapter;
     private ViewPager newFragmentVp;
     private LinearLayout pointLl;//轮播图状态改变的小圆点
     private List<NewFragmentRoateBean> data;
+    private List<NewestBean.ResultBean.NewslistBean> datas;
     private NewestHandAdapter vpAadpter;
+    private final int REFRESH_COMPLETE = 0;
+    private InterHandler mInterHandler=new InterHandler(this);
+    private class InterHandler extends Handler {
+        private WeakReference<NewestFragment> mFragments;
+        public InterHandler(NewestFragment fragment){
+            mFragments=new WeakReference<NewestFragment>(fragment);
+        }
+        public void handleMessage(Message msg){
+            NewestFragment fragment=mFragments.get();
+            if (fragment!=null){
+                switch (msg.what){
+                    case REFRESH_COMPLETE:
+                        fragment.lv.setOnRefreshComplete();
+                        fragment.adapter.notifyDataSetChanged();
+                        fragment.lv.setSelection(0);
+                        break;
+                }
+
+            }else {
+                super.handleMessage(msg);
+            }
+        }
+
+    }
 
     public static NewestFragment newInstance(String string) {
 
@@ -56,6 +83,9 @@ public class NewestFragment extends AbsBaseFragment {
     @Override
     protected void initViews() {
         lv = byView(R.id.fragment_newest_lv);
+        datas=new ArrayList<>();
+        lv.setOnAutoHomeRefreshListener(this);
+
     }
 
 
@@ -202,4 +232,19 @@ public class NewestFragment extends AbsBaseFragment {
         data.add(new NewFragmentRoateBean("http://www3.autoimg.cn/newsdfs/g17/M06/48/EB/640x320_0_autohomecar__wKgH51ffQBSASzHZAAfasiEN3g4753.jpg"));
     }
 
+    @Override
+    public void onRefresh() {
+        new Thread(new Runnable() {
+
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(3000);
+                    mInterHandler.sendEmptyMessage(REFRESH_COMPLETE);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+    }
 }
