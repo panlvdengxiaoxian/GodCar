@@ -15,7 +15,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#a18787"/>
+        android:background="#ecdede"/>
 
     <ListView
         android:id="@+id/hot_topic_listView"
@@ -23,7 +23,7 @@
         android:layout_height="0dp"
         android:layout_margin="10dp"
         android:layout_weight="10"
-        android:divider="#f00"
-        android:dividerHeight="1dp"/>
+        android:divider="#edc2c2"
+        android:dividerHeight="0.5dp"/>
 
 </LinearLayout>

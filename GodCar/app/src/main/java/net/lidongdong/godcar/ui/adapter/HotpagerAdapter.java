@@ -12,6 +12,7 @@ import net.lidongdong.godcar.R;
 import net.lidongdong.godcar.model.bean.HotPagerBean;
 import net.lidongdong.godcar.utils.ScreenSize;
 
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 /**

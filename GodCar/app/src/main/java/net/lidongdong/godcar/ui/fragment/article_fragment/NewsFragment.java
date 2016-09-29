@@ -15,6 +15,8 @@ import com.google.gson.Gson;
 
 import net.lidongdong.godcar.R;
 import net.lidongdong.godcar.model.bean.NewsBean;
+import net.lidongdong.godcar.model.net.IVolleyResult;
+import net.lidongdong.godcar.model.net.VolleyInstance;
 import net.lidongdong.godcar.ui.adapter.NewsAdapter;
 import net.lidongdong.godcar.ui.app.MyApp;
 import net.lidongdong.godcar.ui.fragment.AbsBaseFragment;
@@ -87,23 +89,27 @@ public class NewsFragment extends AbsBaseFragment implements AutoHomeListView.On
         newsLv.setAdapter(newsAdapter);
         Bundle bundle=getArguments();
         String NewsUrl=bundle.getString("URL");
-        RequestQueue queue= Volley.newRequestQueue(MyApp.getContext());
-        StringRequest request=new StringRequest(NewsUrl, new Response.Listener<String>() {
+        VolleyInstance.getInstance().startRequest(NewsUrl, new IVolleyResult() {
             @Override
-            public void onResponse(String response) {
+            public void success(String str, int who) {
+
+            }
+
+            @Override
+            public void success(String str) {
 
                 Gson gson=new Gson();
-                NewsBean bean=gson.fromJson(response,NewsBean.class);
+                NewsBean bean=gson.fromJson(str,NewsBean.class);
                 datas=bean.getResult().getNewslist();
                 newsAdapter.setDatas(datas);
             }
-        }, new Response.ErrorListener() {
+
             @Override
-            public void onErrorResponse(VolleyError error) {
+            public void failure() {
 
             }
         });
-        queue.add(request);
+
 
     }
 

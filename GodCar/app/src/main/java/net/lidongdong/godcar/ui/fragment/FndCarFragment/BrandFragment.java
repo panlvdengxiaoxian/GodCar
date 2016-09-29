@@ -3,12 +3,15 @@ package net.lidongdong.godcar.ui.fragment.FndCarFragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.google.gson.Gson;
 
 import net.lidongdong.godcar.R;
 import net.lidongdong.godcar.model.bean.BrandBean;
+import net.lidongdong.godcar.model.bean.BrandHotBean;
 import net.lidongdong.godcar.model.net.IVolleyResult;
 import net.lidongdong.godcar.model.net.VolleyInstance;
 import net.lidongdong.godcar.ui.adapter.BrandAdapter;
@@ -41,12 +44,14 @@ public class BrandFragment extends AbsBaseFragment {
     @Override
     protected void initViews() {
      listView=byView(R.id.brand_lv);
+
     }
 
     @Override
     protected void initDatas() {
         //添加头布局
         View headView= LayoutInflater.from(context).inflate(R.layout.head_brand_listview,null);
+
         buildDatas();
         listView.addHeaderView(headView);
         adapter=new BrandAdapter(context);
@@ -76,6 +81,27 @@ public class BrandFragment extends AbsBaseFragment {
     }
 
     private void buildDatas() {
+        VolleyInstance.getInstance().startRequest(urlHand, new IVolleyResult() {
+            @Override
+            public void success(String str, int who) {
 
+            }
+
+            @Override
+            public void success(String str) {
+                Gson gson=new Gson();
+                BrandHotBean bean=gson.fromJson(str,BrandHotBean.class);
+                List<BrandHotBean.ResultBean.ListBean> data=bean.getResult().getList();
+
+
+            }
+
+            @Override
+            public void failure() {
+
+            }
+        });
     }
+
+
 }

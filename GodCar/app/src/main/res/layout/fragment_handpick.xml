@@ -8,6 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -18,16 +19,16 @@
                 android:id="@+id/fragment_handpick_recycler"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="8"
-                android:layout_gravity="center_vertical" />
+                android:layout_gravity="center_vertical"
+                android:layout_weight="8" />
 
             <ImageView
-                android:padding="10dp"
                 android:id="@+id/handpick_popWindow_img"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginRight="10dp"
+                android:padding="10dp"
                 android:src="@mipmap/four_kou" />
 
         </LinearLayout>

@@ -130,4 +130,8 @@ public class WebVelues {
     public static final String BRAND="http://app.api.autohome.com.cn/autov5.0.0/news/brandsfastnews-pm1-ts0.json";
     /**---------地区--------**/
     public static final String AREA="http://comm.app.autohome.com.cn/news/province-pm2-ts0.json";
+    /**---------发现-轮播图-------**/
+    public static final String AUTO="http://app.api.autohome.com.cn/autov5.0.0/mobile/appadvert-a2-pm1-v5.0.1-sid2-pid340000-cid0-lat0.000000-lng0.000000.json";
+    /**---------发现页-导航--------**/
+    public static final String MODEL="http://223.99.255.20/mobilenc.app.autohome.com.cn/discover_v5.9.5/mobile/functionlist-a2-pm2-v6.2.1-pid210000-cid210200.json";
 }

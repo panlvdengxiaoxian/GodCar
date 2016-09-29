@@ -13,6 +13,8 @@ import com.google.gson.Gson;
 
 import net.lidongdong.godcar.R;
 import net.lidongdong.godcar.model.bean.CultureBean;
+import net.lidongdong.godcar.model.net.IVolleyResult;
+import net.lidongdong.godcar.model.net.VolleyInstance;
 import net.lidongdong.godcar.ui.adapter.CutureAdapter;
 import net.lidongdong.godcar.ui.app.MyApp;
 import net.lidongdong.godcar.ui.fragment.AbsBaseFragment;
@@ -52,22 +54,25 @@ public class CutureFragment extends AbsBaseFragment {
         listView.setAdapter(adapter);
         Bundle bundle = getArguments();
         String CultureUrl = bundle.getString("URL");
-        RequestQueue queue = Volley.newRequestQueue(MyApp.getContext());
-        StringRequest request = new StringRequest(CultureUrl, new Response.Listener<String>() {
+        VolleyInstance.getInstance().startRequest(CultureUrl, new IVolleyResult() {
             @Override
-            public void onResponse(String response) {
+            public void success(String str, int who) {
+
+            }
+
+            @Override
+            public void success(String str) {
                 Gson gson = new Gson();
-                CultureBean bean = gson.fromJson(response, CultureBean.class);
+                CultureBean bean = gson.fromJson(str, CultureBean.class);
                 List<CultureBean.ResultBean.NewslistBean> data = bean.getResult().getNewslist();
                 adapter.setDatas(data);
             }
-        }, new Response.ErrorListener() {
+
             @Override
-            public void onErrorResponse(VolleyError error) {
+            public void failure() {
 
             }
         });
-        queue.add(request);
 
 
     }

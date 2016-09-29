@@ -2,6 +2,8 @@ package net.lidongdong.godcar.ui.fragment.Forum_fragment;
 
 import net.lidongdong.godcar.R;
 import net.lidongdong.godcar.model.bean.HotPagerBean;
+import net.lidongdong.godcar.model.net.IVolleyResult;
+import net.lidongdong.godcar.model.net.VolleyInstance;
 import net.lidongdong.godcar.model.net.WebVelues;
 import net.lidongdong.godcar.ui.adapter.HotpagerAdapter;
 import net.lidongdong.godcar.ui.app.MyApp;
@@ -26,10 +28,10 @@ import java.util.List;
 
 
 public class HotPagerFragment extends AbsBaseFragment {
-    public static HotPagerFragment newInstance() {
+    public static HotPagerFragment newInstance(String url) {
         
         Bundle args = new Bundle();
-        
+        args.putString("URL",url);
         HotPagerFragment fragment = new HotPagerFragment();
         fragment.setArguments(args);
         return fragment;
@@ -51,22 +53,28 @@ public class HotPagerFragment extends AbsBaseFragment {
     protected void initDatas() {
         adapter = new HotpagerAdapter(context);
         listView.setAdapter(adapter);
-        RequestQueue requestQueue = Volley.newRequestQueue(MyApp.getContext());
-        StringRequest stringRequest = new StringRequest(WebVelues.HOTPAGER, new Response.Listener<String>() {
+        Bundle bundle=getArguments();
+        String url=bundle.getString("URL");
+        VolleyInstance.getInstance().startRequest(url, new IVolleyResult() {
             @Override
-            public void onResponse(String response) {
+            public void success(String str, int who) {
+
+            }
+
+            @Override
+            public void success(String str) {
                 Gson gson = new Gson();
-                HotPagerBean bean = gson.fromJson(response, HotPagerBean.class);
+                HotPagerBean bean = gson.fromJson(str, HotPagerBean.class);
                 List<HotPagerBean.ResultBean.ListBean> data = bean.getResult().getList();
                 adapter.setData(data);
             }
-        }, new Response.ErrorListener() {
+
             @Override
-            public void onErrorResponse(VolleyError error) {
+            public void failure() {
 
             }
         });
-        requestQueue.add(stringRequest);
+
 
     }
 }

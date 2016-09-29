@@ -12,24 +12,18 @@ import android.widget.ListView;
 import net.lidongdong.godcar.R;
 import net.lidongdong.godcar.model.bean.NewFragmentRoateBean;
 import net.lidongdong.godcar.model.bean.NewestBean;
+import net.lidongdong.godcar.model.net.IVolleyResult;
+import net.lidongdong.godcar.model.net.VolleyInstance;
 import net.lidongdong.godcar.ui.activity.NewestFragmentToAty;
 import net.lidongdong.godcar.ui.adapter.NewestAdapter;
 import net.lidongdong.godcar.ui.adapter.NewestHandAdapter;
-import net.lidongdong.godcar.ui.app.MyApp;
 import net.lidongdong.godcar.ui.fragment.AbsBaseFragment;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import android.content.Intent;
-import android.util.Log;
 import android.widget.AdapterView;
-
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 
 /**
@@ -71,24 +65,25 @@ public class NewestFragment extends AbsBaseFragment {
         lv.setAdapter(adapter);
         Bundle bundle = getArguments();
         String NewFragmentUrl = bundle.getString("URL");
-        RequestQueue queue = Volley.newRequestQueue(MyApp.getContext());
-        StringRequest sr = new StringRequest(NewFragmentUrl, new Response.Listener<String>() {
+        VolleyInstance.getInstance().startRequest(NewFragmentUrl, new IVolleyResult() {
             @Override
-            public void onResponse(String response) {
-                Log.d("1111", response);
+            public void success(String str, int who) {
+
+            }
+
+            @Override
+            public void success(String str) {
                 Gson gson = new Gson();
-                NewestBean bean = gson.fromJson(response, NewestBean.class);
-                Log.d("1111", "bean:" + bean);
+                NewestBean bean = gson.fromJson(str, NewestBean.class);
                 List<NewestBean.ResultBean.NewslistBean> datas = bean.getResult().getNewslist();
                 adapter.setData(datas);
             }
-        }, new Response.ErrorListener() {
+
             @Override
-            public void onErrorResponse(VolleyError error) {
+            public void failure() {
 
             }
         });
-        queue.add(sr);
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

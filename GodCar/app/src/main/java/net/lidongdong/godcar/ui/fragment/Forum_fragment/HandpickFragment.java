@@ -1,7 +1,6 @@
 package net.lidongdong.godcar.ui.fragment.Forum_fragment;
 
 
-
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 
@@ -22,8 +21,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 
-
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,13 +30,14 @@ import java.util.List;
  */
 public class HandpickFragment extends AbsBaseFragment implements View.OnClickListener {
     public static HandpickFragment newInstance() {
-        
+
         Bundle args = new Bundle();
-        
+
         HandpickFragment fragment = new HandpickFragment();
         fragment.setArguments(args);
         return fragment;
     }
+
     private RecyclerView rv;
     private HandpicAdapter adapter;
     private List<String> data;
@@ -92,8 +90,15 @@ public class HandpickFragment extends AbsBaseFragment implements View.OnClickLis
             public void OnRvItemClicListener(int pos, String str) {
                 FragmentManager managers = getChildFragmentManager();
                 FragmentTransaction transaction = managers.beginTransaction();
+                switch (pos){
+                    case 0:
+                        break;
+                    case 1:
+                        break;
+                }
                 transaction.replace(R.id.fragment_picRecommend_replaceView, AllFragment.newInstance(list[pos]));
                 transaction.commit();
+
 
             }
         });
@@ -111,12 +116,13 @@ public class HandpickFragment extends AbsBaseFragment implements View.OnClickLis
     private void buildDatas() {
         //利用循环从数组array向list中添加元素
         data = new ArrayList<>();
-        String[] datas=getResources().getStringArray(R.array.titles);
+        String[] datas = getResources().getStringArray(R.array.titles);
         for (int i = 0; i < 41; i++) {
             data.add(datas[i]);
         }
 
     }
+
     @Override
     public void onClick(View v) {
         switch (v.getId()) {

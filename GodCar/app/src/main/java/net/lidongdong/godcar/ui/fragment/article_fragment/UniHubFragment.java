@@ -2,6 +2,8 @@ package net.lidongdong.godcar.ui.fragment.article_fragment;
 
 import net.lidongdong.godcar.R;
 import net.lidongdong.godcar.model.bean.UniHubBean;
+import net.lidongdong.godcar.model.net.IVolleyResult;
+import net.lidongdong.godcar.model.net.VolleyInstance;
 import net.lidongdong.godcar.ui.adapter.UniHubAdapter;
 import net.lidongdong.godcar.ui.app.MyApp;
 import net.lidongdong.godcar.ui.fragment.AbsBaseFragment;
@@ -54,21 +56,25 @@ public class UniHubFragment extends AbsBaseFragment {
         listView.setAdapter(adapter);
         Bundle bundle = getArguments();
         String UniHubFragmentURL = bundle.getString("URL");
-        RequestQueue queue = Volley.newRequestQueue(MyApp.getContext());
-        StringRequest request = new StringRequest(UniHubFragmentURL, new Response.Listener<String>() {
+        VolleyInstance.getInstance().startRequest(UniHubFragmentURL, new IVolleyResult() {
             @Override
-            public void onResponse(String response) {
+            public void success(String str, int who) {
+
+            }
+
+            @Override
+            public void success(String str) {
                 Gson gson = new Gson();
-                UniHubBean bean = gson.fromJson(response, UniHubBean.class);
+                UniHubBean bean = gson.fromJson(str, UniHubBean.class);
                 List<UniHubBean.ResultBean.NewslistBean> data = bean.getResult().getNewslist();
                 adapter.setData(data);
             }
-        }, new Response.ErrorListener() {
+
             @Override
-            public void onErrorResponse(VolleyError error) {
+            public void failure() {
 
             }
         });
-        queue.add(request);
+
     }
 }

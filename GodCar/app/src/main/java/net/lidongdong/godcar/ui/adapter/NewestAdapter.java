@@ -22,9 +22,11 @@ import com.bumptech.glide.Glide;
 public class NewestAdapter extends BaseAdapter {
     private List<NewestBean.ResultBean.NewslistBean> data;
     private Context context;
+    private LayoutInflater inflater;
 
     public NewestAdapter(Context context) {
         this.context = context;
+        inflater=LayoutInflater.from(context);
     }
 
     public void setData(List<NewestBean.ResultBean.NewslistBean> data) {
@@ -48,6 +50,16 @@ public class NewestAdapter extends BaseAdapter {
     }
 
     @Override
+    public int getItemViewType(int position) {
+        return super.getItemViewType(position);
+    }
+
+    @Override
+    public int getViewTypeCount() {
+        return 2;
+    }
+
+    @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         NewestFragmentViewHolder holder = null;
         if (convertView == null) {
@@ -63,19 +75,22 @@ public class NewestAdapter extends BaseAdapter {
         if (bean != null) {
             holder.titleTv.setText(bean.getTitle());
             holder.timeTv.setText(bean.getTime());
+            holder.replycountTv.setText("评论"+bean.getReplycount());
             Glide.with(context).load(bean.getSmallpic()).into(holder.iv);
+
         }
         return convertView;
     }
 
     public class NewestFragmentViewHolder {
         ImageView iv;
-        TextView titleTv, timeTv;
+        TextView titleTv, timeTv,replycountTv;
 
         public NewestFragmentViewHolder(View view) {
             iv = (ImageView) view.findViewById(R.id.item_newest_iv);
             titleTv = (TextView) view.findViewById(R.id.item_newest_titleTv);
             timeTv = (TextView) view.findViewById(R.id.item_newest_timeTv);
+            replycountTv = (TextView) view.findViewById(R.id.item_newest_replycount);
         }
     }
 }

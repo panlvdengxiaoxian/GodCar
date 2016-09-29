@@ -4,6 +4,8 @@ import android.os.Bundle;
 
 import net.lidongdong.godcar.R;
 import net.lidongdong.godcar.model.bean.BulletinBean;
+import net.lidongdong.godcar.model.net.IVolleyResult;
+import net.lidongdong.godcar.model.net.VolleyInstance;
 import net.lidongdong.godcar.ui.adapter.BulletinAdapter;
 import net.lidongdong.godcar.ui.app.MyApp;
 import net.lidongdong.godcar.ui.fragment.AbsBaseFragment;
@@ -53,21 +55,25 @@ public class BulletinFragment extends AbsBaseFragment {
         listView.setAdapter(adapter);
         Bundle bundle = getArguments();
         String bulletinURL = bundle.getString("URL");
-        RequestQueue queue = Volley.newRequestQueue(MyApp.getContext());
-        StringRequest stringRequest = new StringRequest(bulletinURL, new Response.Listener<String>() {
+        VolleyInstance.getInstance().startRequest(bulletinURL, new IVolleyResult() {
             @Override
-            public void onResponse(String response) {
+            public void success(String str, int who) {
+
+            }
+
+            @Override
+            public void success(String str) {
                 Gson gson = new Gson();
-                BulletinBean bean = gson.fromJson(response, BulletinBean.class);
+                BulletinBean bean = gson.fromJson(str, BulletinBean.class);
                 List<BulletinBean.ResultBean.ListBean> data = bean.getResult().getList();
                 adapter.setData(data);
             }
-        }, new Response.ErrorListener() {
+
             @Override
-            public void onErrorResponse(VolleyError error) {
+            public void failure() {
 
             }
         });
-        queue.add(stringRequest);
+
     }
 }
